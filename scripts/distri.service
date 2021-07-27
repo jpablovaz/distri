@@ -4,6 +4,6 @@ Description=Distri Boot
 [Service]
 ExecStart=/opt/distri/scripts/booting.sh start
 
-WantedBy=multi-user.target
 [Install]
+WantedBy=multi-user.target
 

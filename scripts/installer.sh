@@ -40,3 +40,4 @@ mkdir /opt/distri/cache
 # Re-Join APP
 #######################################################
 cat /opt/distri/app/app.* > ~/Desktop/Distribuidora Mendoza.AppImage
+
