@@ -2,14 +2,10 @@
 #######################################################
 # DOCKER Installation
 #######################################################
-sudo apt update
-sudo apt upgrade
-sudo apt install git
-sudo apt install docker.io
-docker stop $(docker ps -a -q)
-sudo usermod -aG docker $USER
-newgrp docker
-yes | docker system prune -a
+yes | sudo apt update
+yes | sudo apt upgrade
+yes | sudo apt install git
+yes | sudo apt install docker.io
 
 #######################################################
 # Cleaning up old installations
@@ -28,6 +24,7 @@ git clone https://github.com/jpablovaz/distri.git /opt/distri
 #######################################################
 sudo chmod +x /opt/distri/scripts/booting.sh
 sudo mv /opt/distri/scripts/distri.service /etc/systemd/system
+sudo systemctl daemon-reload
 sudo systemctl enable distri.service
 
 #######################################################
@@ -41,3 +38,7 @@ mkdir /opt/distri/cache
 #######################################################
 cat /opt/distri/app/app.* > ~/Desktop/Distribuidora Mendoza.AppImage
 
+#sudo docker stop $(docker ps -a -q)
+sudo usermod -aG docker $USER
+newgrp docker
+#yes | docker system prune -a
