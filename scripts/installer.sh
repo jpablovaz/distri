@@ -25,17 +25,17 @@ sudo chmod 777 /opt/distri -R
 #######################################################
 # Downloads
 #######################################################
-wget /opt/distri/scripts/ https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.service
-wget /opt/distri/scripts/ https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.service -P /opt/distri/scripts/  
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh -P /opt/distri/scripts/ 
 
-wget /opt/distri/docker/ https://raw.githubusercontent.com/jpablovaz/distri/main/docker/docker-compose.yml
-wget /opt/distri/docker/java/ https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java/Dockerfile
-wget /opt/distri/docker/java/ https://github.com/jpablovaz/distri/raw/main/docker/java/distri.jar
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/docker-compose.yml -P /opt/distri/docker/
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java/Dockerfile -P /opt/distri/docker/java/
+wget https://github.com/jpablovaz/distri/raw/main/docker/java/distri.jar -P /opt/distri/docker/java/
 
-wget /opt/distri/docker/app/ https://github.com/jpablovaz/distri/raw/main/app/app.aa
-wget /opt/distri/docker/app/ https://github.com/jpablovaz/distri/raw/main/app/app.ab
-wget /opt/distri/docker/app/ https://github.com/jpablovaz/distri/raw/main/app/app.ac
-wget /opt/distri/docker/app/ https://github.com/jpablovaz/distri/raw/main/app/app.ad
+wget https://github.com/jpablovaz/distri/raw/main/app/app.aa -P /opt/distri/docker/app/
+wget https://github.com/jpablovaz/distri/raw/main/app/app.ab -P /opt/distri/docker/app/
+wget https://github.com/jpablovaz/distri/raw/main/app/app.ac -P /opt/distri/docker/app/
+wget https://github.com/jpablovaz/distri/raw/main/app/app.ad -P /opt/distri/docker/app/
  
 #######################################################
 # Setting Up Boot Script
