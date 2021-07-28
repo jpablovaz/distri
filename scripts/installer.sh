@@ -6,6 +6,7 @@ yes | sudo apt update
 yes | sudo apt upgrade
 yes | sudo apt install git
 yes | sudo apt install docker.io
+yes | sudo apt install docker-compose
 
 #######################################################
 # Cleaning up old installations
@@ -38,7 +39,7 @@ mkdir /opt/distri/cache
 #######################################################
 cat /opt/distri/app/app.* > ~/Desktop/Distribuidora Mendoza.AppImage
 
-#sudo docker stop $(docker ps -a -q)
 sudo usermod -aG docker $USER
 newgrp docker
-#yes | docker system prune -a
+sudo docker stop $(docker ps -a -q)
+yes | docker system prune -a
