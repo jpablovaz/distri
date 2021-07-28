@@ -32,10 +32,10 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/docker-compo
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java/Dockerfile -P /opt/distri/docker/java/
 wget https://github.com/jpablovaz/distri/raw/main/docker/java/distri.jar -P /opt/distri/docker/java/
 
-wget https://github.com/jpablovaz/distri/raw/main/app/app.aa -P /opt/distri/docker/app/
-wget https://github.com/jpablovaz/distri/raw/main/app/app.ab -P /opt/distri/docker/app/
-wget https://github.com/jpablovaz/distri/raw/main/app/app.ac -P /opt/distri/docker/app/
-wget https://github.com/jpablovaz/distri/raw/main/app/app.ad -P /opt/distri/docker/app/
+wget https://github.com/jpablovaz/distri/raw/main/app/app.aa -P /opt/distri/app/
+wget https://github.com/jpablovaz/distri/raw/main/app/app.ab -P /opt/distri/app/
+wget https://github.com/jpablovaz/distri/raw/main/app/app.ac -P /opt/distri/app/
+wget https://github.com/jpablovaz/distri/raw/main/app/app.ad -P /opt/distri/app/
  
 #######################################################
 # Setting Up Boot Script
