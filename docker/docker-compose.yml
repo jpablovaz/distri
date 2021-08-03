@@ -1,22 +1,20 @@
-version: '3'
+version: "3"
 
 services:
-
-  postgres:
+  db-pos:
     image: postgres:13.0-alpine
     environment:
       POSTGRES_USER: distri
       POSTGRES_DB: distri
       POSTGRES_PASSWORD: distri
-    ports:
-      - 5433:5432
     volumes:
       - ./postgres:/var/lib/postgresql/data
     restart: unless-stopped
-
-  spring:
-    build:
-      ./java 
+  jard:
+    build: ./java
+    ports:
+      - 8091:8090
     depends_on:
-      - postgres
-
+      - db-pos
+    volumes:
+      - ./java:/home/app
