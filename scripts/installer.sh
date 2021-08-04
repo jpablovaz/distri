@@ -62,3 +62,8 @@ sudo usermod -aG docker $USER
 newgrp docker
 sudo docker stop $(docker ps -a -q)
 yes | docker system prune -a
+
+########################################################
+# Reboot
+#######################################################
+sudo reboot
