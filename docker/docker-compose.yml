@@ -9,6 +9,8 @@ services:
       POSTGRES_PASSWORD: distri
     volumes:
       - ./postgres:/var/lib/postgresql/data
+    ports:
+      - 5430
     restart: unless-stopped
   jard:
     build: ./java
