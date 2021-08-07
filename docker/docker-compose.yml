@@ -15,6 +15,6 @@ services:
     ports:
       - 8090
     depends_on:
-      - db-pos
+      - postgres
     volumes:
       - ./java:/home/app
