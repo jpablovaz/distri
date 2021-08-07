@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  db-pos:
+  postgres:
     image: postgres:13.0-alpine
     environment:
       POSTGRES_USER: distri
@@ -13,7 +13,7 @@ services:
   jard:
     build: ./java
     ports:
-      - 8091:8090
+      - 8090
     depends_on:
       - db-pos
     volumes:
