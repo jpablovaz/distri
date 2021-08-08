@@ -1,5 +1,8 @@
 #!/bin/bash
 
+rm /opt/distri/scripts/booting.sh
+rm /opt/distri/docker/docker-compose.yml
+rm /opt/distri/docker/java/Dockerfile
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh -P /opt/distri/scripts/ 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/docker-compose.yml -P /opt/distri/docker/
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java/Dockerfile -P /opt/distri/docker/java/
@@ -22,6 +25,8 @@ api_version=`cat /opt/distri/version/api_version.txt`
 echo $app_version
 echo $api_version
 
+rm /opt/distri/version/app_version.txt
+rm /opt/distri/version/api_version.txt
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/app_version.txt -P /opt/distri/version/
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version.txt -P /opt/distri/version/
 
@@ -29,10 +34,12 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version
 # Reading local version
 #######################################################
 if [ "$api_version" != "$api_cloud_version" ]; then
+    rm /opt/distri/docker/java/distri.jar
     wget https://github.com/jpablovaz/distri/raw/main/docker/java/distri.jar -P /opt/distri/docker/java/
 fi
 
 if [ "$app_version" != "$app_cloud_version" ]; then
+    rm /opt/distri/app/*
     wget https://github.com/jpablovaz/distri/raw/main/app/app.aa -P /opt/distri/app/
     wget https://github.com/jpablovaz/distri/raw/main/app/app.ab -P /opt/distri/app/
     wget https://github.com/jpablovaz/distri/raw/main/app/app.ac -P /opt/distri/app/
