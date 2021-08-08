@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #######################################################
 # DOCKER Installation
 #######################################################
@@ -38,13 +39,7 @@ wget https://github.com/jpablovaz/distri/raw/main/app/app.ac -P /opt/distri/app/
 wget https://github.com/jpablovaz/distri/raw/main/app/app.ad -P /opt/distri/app/
 wget https://github.com/jpablovaz/distri/raw/main/app/app.ae -P /opt/distri/app/
 wget https://github.com/jpablovaz/distri/raw/main/app/app.af -P /opt/distri/app/
-wget https://github.com/jpablovaz/distri/raw/main/app/app.ag -P /opt/distri/app/
-wget https://github.com/jpablovaz/distri/raw/main/app/app.ah -P /opt/distri/app/
-wget https://github.com/jpablovaz/distri/raw/main/app/app.ai -P /opt/distri/app/
-wget https://github.com/jpablovaz/distri/raw/main/app/app.aj -P /opt/distri/app/
-wget https://github.com/jpablovaz/distri/raw/main/app/app.ak -P /opt/distri/app/
-wget https://github.com/jpablovaz/distri/raw/main/app/app.al -P /opt/distri/app/
- 
+
 #######################################################
 # Setting Up Boot Script
 #######################################################
