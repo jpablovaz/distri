@@ -19,6 +19,7 @@ sudo mkdir /opt/distri/app
 sudo mkdir /opt/distri/docker
 sudo mkdir /opt/distri/docker/java
 sudo mkdir /opt/distri/backups
+sudo mkdir /opt/distri/version
 sudo mkdir /opt/distri/cache
 
 sudo chmod 777 /opt/distri -R
