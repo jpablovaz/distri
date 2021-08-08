@@ -40,6 +40,9 @@ wget https://github.com/jpablovaz/distri/raw/main/app/app.ad -P /opt/distri/app/
 wget https://github.com/jpablovaz/distri/raw/main/app/app.ae -P /opt/distri/app/
 wget https://github.com/jpablovaz/distri/raw/main/app/app.af -P /opt/distri/app/
 
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/app_version.txt -P /opt/distri/version/
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version.txt -P /opt/distri/version/
+
 #######################################################
 # Setting Up Boot Script
 #######################################################
