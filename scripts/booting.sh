@@ -22,6 +22,9 @@ api_version=`cat /opt/distri/version/api_version.txt`
 echo $app_version
 echo $api_version
 
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/app_version.txt -P /opt/distri/version/
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version.txt -P /opt/distri/version/
+
 #######################################################
 # Reading local version
 #######################################################
