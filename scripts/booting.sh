@@ -33,26 +33,30 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version
 #######################################################
 # Reading local version
 #######################################################
-if [ "$api_version" != "$api_cloud_version" ]; then
-    yes | rm /opt/distri/docker/java/distri.jar
-    wget https://github.com/jpablovaz/distri/raw/main/docker/java/distri.jar -P /opt/distri/docker/java/
-    mkdir ~/Desktop/apiDif
-else
-    mkdir ~/Desktop/apiEqual
-fi
-
 if [ "$app_version" != "$app_cloud_version" ]; then
     yes | rm /opt/distri/app/*
+    yes | rm ~/Desktop/Distribuidora_Mendoza.AppImage
     wget https://github.com/jpablovaz/distri/raw/main/app/app.aa -P /opt/distri/app/
     wget https://github.com/jpablovaz/distri/raw/main/app/app.ab -P /opt/distri/app/
     wget https://github.com/jpablovaz/distri/raw/main/app/app.ac -P /opt/distri/app/
     wget https://github.com/jpablovaz/distri/raw/main/app/app.ad -P /opt/distri/app/
     wget https://github.com/jpablovaz/distri/raw/main/app/app.ae -P /opt/distri/app/
     wget https://github.com/jpablovaz/distri/raw/main/app/app.af -P /opt/distri/app/
-#    reboot
-    mkdir ~/Desktop/appDif
+    cat /opt/distri/app/app.* > ~/Desktop/Distribuidora_Mendoza.AppImage
+    chmod +x ~/Desktop/Distribuidora_Mendoza.AppImage
+    mkdir ~/Desktop/app_Diff
 else
-    mkdir ~/Desktop/appEqual
-    cd /opt/distri/docker
-    docker-compose up
+    mkdir ~/Desktop/app_Equal
 fi
+
+if [ "$api_version" != "$api_cloud_version" ]; then
+    yes | rm /opt/distri/docker/java/distri.jar
+    wget https://github.com/jpablovaz/distri/raw/main/docker/java/distri.jar -P /opt/distri/docker/java/
+    mkdir ~/Desktop/api_Diff
+else
+    mkdir ~/Desktop/api_Equal
+fi
+
+cd /opt/distri/docker
+docker-compose up
+
