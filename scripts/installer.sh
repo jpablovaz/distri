@@ -51,6 +51,7 @@ sudo chmod +x /opt/distri/scripts/booting.sh
 sudo mv /opt/distri/scripts/distri.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl enable distri.service
+#sudo systemctl enable systemd-networkd.service distri.service
 
 #######################################################
 # Re-Join APP
