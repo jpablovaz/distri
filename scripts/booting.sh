@@ -2,6 +2,8 @@
 
 rm /opt/distri/docker/docker-compose.yml
 rm /opt/distri/docker/java/Dockerfile
+rm /opt/distri/scripts/booting.sh
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh -P /opt/distri/scripts/ 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/docker-compose.yml -P /opt/distri/docker/
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java/Dockerfile -P /opt/distri/docker/java/
 
@@ -55,5 +57,4 @@ else
     docker-compose up
 fi
 
-rm /opt/distri/scripts/booting.sh
-wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh -P /opt/distri/scripts/ 
+
