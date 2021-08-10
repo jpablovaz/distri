@@ -57,7 +57,7 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version
 # Setting Up Boot Script
 #######################################################
 sudo chmod +x /opt/distri/scripts/booting.sh
-sudo chmod +x /opt/distri/scripts/app.sh
+sudo chmod +x ~/.distri/desktop.sh
 sudo mv /opt/distri/scripts/distri.service /etc/systemd/system
 sudo mv /opt/distri/scripts/app.service /etc/systemd/system
 sudo systemctl daemon-reload
@@ -73,12 +73,12 @@ sudo systemctl enable app.service
 cat /opt/distri/app/app.* > ~/.distri/dm.AppImage
 #wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.desktop -P ~/.local/share/applications
 
-cat > /home/$user_dir/.local/share/applications/distri.desktop <<EOF
+cat > ~/.local/share/applications/distri.desktop <<EOF
 [Desktop Entry]
 Name=Distribuidora
 Comment=Administration
-Exec=/home/$user_dir/.distri/desktop.sh
-Icon=/home/$user_dir/.distri/pig.png
+Exec=/home/$USER/.distri/desktop.sh
+Icon=/home/$USER/.distri/pig.png
 Terminal=false
 Type=Application
 Categories=Utility
