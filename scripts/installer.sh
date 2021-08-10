@@ -33,8 +33,10 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.serv
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/app.service -P /opt/distri/scripts/  
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh -P /opt/distri/scripts/ 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/app.sh -P /opt/distri/scripts/ 
-wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/desktop.sh -P /opt/distri/scripts/ 
-wget https://raw.githubusercontent.com/jpablovaz/distri/main/images/pig.png -P /opt/distri/images/ 
+#wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/desktop.sh -P /opt/distri/scripts/ 
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/desktop.sh -P ~/.distri/ 
+#wget https://raw.githubusercontent.com/jpablovaz/distri/main/images/pig.png -P /opt/distri/images/ 
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/images/pig.png -P ~/.distri/
 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/docker-compose.yml -P /opt/distri/docker/
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java/Dockerfile -P /opt/distri/docker/java/
@@ -67,8 +69,10 @@ sudo systemctl enable app.service
 # Re-Join APP
 #######################################################
 #cat /opt/distri/app/app.* > ~/Desktop/Distribuidora_Mendoza.AppImage
-cat /opt/distri/app/app.* > /opt/distri/app/dm.AppImage
+#cat /opt/distri/app/app.* > /opt/distri/app/dm.AppImage
+cat /opt/distri/app/app.* > ~/.distri/dm.AppImage
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.desktop -P ~/.local/share/applications
+rm /opt/distri/app/app.*
 sudo desktop-file-install ~/.local/share/applications/distri.desktop
 #sudo chmod 777 /opt/distri -R
 
