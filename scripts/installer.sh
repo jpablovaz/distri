@@ -71,7 +71,19 @@ sudo systemctl enable app.service
 #cat /opt/distri/app/app.* > ~/Desktop/Distribuidora_Mendoza.AppImage
 #cat /opt/distri/app/app.* > /opt/distri/app/dm.AppImage
 cat /opt/distri/app/app.* > ~/.distri/dm.AppImage
-wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.desktop -P ~/.local/share/applications
+#wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.desktop -P ~/.local/share/applications
+
+cat > /home/$user_dir/.local/share/applications/distri.desktop <<EOF
+[Desktop Entry]
+Name=Distribuidora
+Comment=Administration
+Exec=/home/$user_dir/.distri/desktop.sh
+Icon=/home/$user_dir/.distri/pig.png
+Terminal=false
+Type=Application
+Categories=Utility
+EOF
+
 rm /opt/distri/app/app.*
 sudo desktop-file-install ~/.local/share/applications/distri.desktop
 #sudo chmod 777 /opt/distri -R
