@@ -7,9 +7,9 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/docker-compose.yml -P /opt/distri/docker/docker-compose2.yml
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java/Dockerfile -P /opt/distri/docker/java/Dockerfile2
 
-yes | mv /opt/distri/scripts/booting2.sh /opt/distri/scripts/booting.sh
-yes | mv /opt/distri/docker/docker-compose2.yml /opt/distri/docker/docker-compose.yml
-yes | mv /opt/distri/docker/java/Dockerfile2 /opt/distri/docker/java/Dockerfile
+mv /opt/distri/scripts/booting2.sh /opt/distri/scripts/booting.sh
+mv /opt/distri/docker/docker-compose2.yml /opt/distri/docker/docker-compose.yml
+mv /opt/distri/docker/java/Dockerfile2 /opt/distri/docker/java/Dockerfile
 
 #######################################################
 # Reading cloud version
@@ -34,8 +34,8 @@ echo $api_version
 #yes | rm /opt/distri/version/api_version.txt
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/app_version.txt -P /opt/distri/version/app_version2.txt
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version.txt -P /opt/distri/version/api_version2.txt
-yes | mv /opt/distri/version/app_version2.txt /opt/distri/version/app_version.txt
-yes | mv /opt/distri/version/api_version2.txt /opt/distri/version/api_version.txt
+mv /opt/distri/version/app_version2.txt /opt/distri/version/app_version.txt
+mv /opt/distri/version/api_version2.txt /opt/distri/version/api_version.txt
 
 #######################################################
 # Reading local version
