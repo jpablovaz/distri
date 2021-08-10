@@ -73,6 +73,8 @@ sudo systemctl enable app.service
 cat /opt/distri/app/app.* > ~/.distri/dm.AppImage
 #wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.desktop -P ~/.local/share/applications
 
+sudo chmod +x ~/.distri/dm.AppImage
+
 cat > ~/.local/share/applications/distri.desktop <<EOF
 [Desktop Entry]
 Name=Distribuidora
