@@ -34,7 +34,6 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/app.service
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh -P /opt/distri/scripts/ 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/app.sh -P /opt/distri/scripts/ 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/desktop.sh -P /opt/distri/scripts/ 
-wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.desktop -P ~/.local/share/application
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/images/pig.png -P /opt/distri/images/ 
 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/docker-compose.yml -P /opt/distri/docker/
@@ -50,6 +49,7 @@ wget https://github.com/jpablovaz/distri/raw/main/app/app.af -P /opt/distri/app/
 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/app_version.txt -P /opt/distri/version/
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version.txt -P /opt/distri/version/
+
 
 #######################################################
 # Setting Up Boot Script
@@ -68,6 +68,7 @@ sudo systemctl enable app.service
 #######################################################
 #cat /opt/distri/app/app.* > ~/Desktop/Distribuidora_Mendoza.AppImage
 cat /opt/distri/app/app.* > /opt/distri/app/dm.AppImage
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.desktop -P ~/.local/share/application
 #sudo chmod 777 /opt/distri -R
 
 chmod +x /opt/distri/app/dm.AppImage
