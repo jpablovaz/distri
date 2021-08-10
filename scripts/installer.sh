@@ -28,7 +28,9 @@ sudo chmod 777 /opt/distri -R
 # Downloads
 #######################################################
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.service -P /opt/distri/scripts/  
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/app.service -P /opt/distri/scripts/  
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh -P /opt/distri/scripts/ 
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/app.sh -P /opt/distri/scripts/ 
 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/docker-compose.yml -P /opt/distri/docker/
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java/Dockerfile -P /opt/distri/docker/java/
@@ -48,9 +50,12 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version
 # Setting Up Boot Script
 #######################################################
 sudo chmod +x /opt/distri/scripts/booting.sh
+sudo chmod +x /opt/distri/scripts/app.sh
 sudo mv /opt/distri/scripts/distri.service /etc/systemd/system
+sudo mv /opt/distri/scripts/app.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl enable distri.service
+sudo systemctl enable app.service
 #sudo systemctl enable systemd-networkd.service distri.service
 
 #######################################################
