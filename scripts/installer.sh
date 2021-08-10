@@ -63,7 +63,7 @@ sudo systemctl enable app.service
 #######################################################
 #cat /opt/distri/app/app.* > ~/Desktop/Distribuidora_Mendoza.AppImage
 cat /opt/distri/app/app.* > /opt/distri/app/dm.AppImage
-sudo chmod 777 /opt/distri -R
+#sudo chmod 777 /opt/distri -R
 
 chmod +x /opt/distri/app/dm.AppImage
 echo $USER > /opt/distri/scripts/user.txt
