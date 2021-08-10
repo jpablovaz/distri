@@ -61,8 +61,9 @@ sudo systemctl enable app.service
 #######################################################
 # Re-Join APP
 #######################################################
-cat /opt/distri/app/app.* > ~/Desktop/Distribuidora_Mendoza.AppImage
-chmod +x ~/Desktop/Distribuidora_Mendoza.AppImage
+#cat /opt/distri/app/app.* > ~/Desktop/Distribuidora_Mendoza.AppImage
+cat /opt/distri/app/app.* > /opt/distri/app/dm.AppImage
+chmod +x /opt/distri/app/dm.AppImage
 echo $USER > /opt/distri/scripts/user.txt
 sudo usermod -aG docker $USER
 newgrp docker

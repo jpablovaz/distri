@@ -1,11 +1,15 @@
 #!/bin/bash
 
-yes | rm /opt/distri/docker/docker-compose.yml
-yes | rm /opt/distri/docker/java/Dockerfile
-yes | rm /opt/distri/scripts/booting.sh
-wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh -P /opt/distri/scripts/ 
-wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/docker-compose.yml -P /opt/distri/docker/
-wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java/Dockerfile -P /opt/distri/docker/java/
+#yes | rm /opt/distri/docker/docker-compose.yml
+#yes | rm /opt/distri/docker/java/Dockerfile
+#yes | rm /opt/distri/scripts/booting.sh
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh -P /opt/distri/scripts/booting2.sh
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/docker-compose.yml -P /opt/distri/docker/docker-compose2.yml
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java/Dockerfile -P /opt/distri/docker/java/Dockerfile2
+
+yes | mv /opt/distri/scripts/booting2.sh /opt/distri/scripts/booting.sh
+yes | mv /opt/distri/docker/docker-compose2.yml /opt/distri/docker/docker-compose.yml
+yes | mv /opt/distri/docker/java/Dockerfile2 /opt/distri/docker/java/Dockerfile
 
 #######################################################
 # Reading cloud version
@@ -26,10 +30,12 @@ user_dir=`cat /opt/distri/scripts/user.txt`
 echo $app_version
 echo $api_version
 
-yes | rm /opt/distri/version/app_version.txt
-yes | rm /opt/distri/version/api_version.txt
-wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/app_version.txt -P /opt/distri/version/
-wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version.txt -P /opt/distri/version/
+#yes | rm /opt/distri/version/app_version.txt
+#yes | rm /opt/distri/version/api_version.txt
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/app_version.txt -P /opt/distri/version/app_version2.txt
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version.txt -P /opt/distri/version/api_version2.txt
+yes | mv /opt/distri/version/app_version2.txt /opt/distri/version/app_version.txt
+yes | mv /opt/distri/version/api_version2.txt /opt/distri/version/api_version.txt
 
 #######################################################
 # Reading local version
