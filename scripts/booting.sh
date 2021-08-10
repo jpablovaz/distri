@@ -43,11 +43,6 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java/Dockerf
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/app_version.txt -P $f_v_app_2
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version.txt -P $f_v_api_2
 
-if [[ -f "$f_booting_2" ]]; then
-    yes | rm $f_booting
-    mv $f_booting_2 $f_booting
-fi
-
 if [[ -f "$f_compose_2" ]]; then
     yes | rm $f_compose
     mv $f_compose_2 $f_compose
@@ -106,4 +101,10 @@ chmod +x /opt/distri/app/dm.AppImage
 
 cd /opt/distri/docker
 docker-compose up
+
+if [[ -f "$f_booting_2" ]]; then
+    yes | rm $f_booting
+    mv $f_booting_2 $f_booting
+fi
+
 
