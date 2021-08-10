@@ -1,13 +1,7 @@
-[Unit]
-Description=Distri Boot
-#After=systemd-networkd-wait-online.service
-#Wants=systemd-networkd-wait-online.service
-After=network-online.target
-Wants=network-online.target
-
-[Service]
-ExecStart=/opt/distri/scripts/booting.sh start
-
-[Install]
-WantedBy=multi-user.target
-
+[Desktop Entry]
+Name= app_name
+Comment= comment_optional
+Icon= app_icon
+Exec=/opt/distri/app/dm.AppImage
+Terminal=false
+Type=Application
