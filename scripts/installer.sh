@@ -70,6 +70,7 @@ newgrp docker
 sudo docker stop $(docker ps -a -q)
 yes | docker system prune -a
 
+sudo chmod 777 /opt/distri -R
 ########################################################
 # Reboot
 #######################################################
