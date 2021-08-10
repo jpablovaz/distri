@@ -58,6 +58,7 @@ sudo systemctl enable distri.service
 #######################################################
 cat /opt/distri/app/app.* > ~/Desktop/Distribuidora_Mendoza.AppImage
 chmod +x ~/Desktop/Distribuidora_Mendoza.AppImage
+echo $USER > /opt/distri/scripts/user.txt
 sudo usermod -aG docker $USER
 newgrp docker
 sudo docker stop $(docker ps -a -q)
