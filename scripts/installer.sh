@@ -12,7 +12,7 @@ yes | sudo apt install docker-compose
 # Cleaning up old installations
 #######################################################
 sudo rm /opt/distri -R
-sudo rm ~/.local/share/application/distri.desktop
+sudo rm ~/.local/share/applications/distri.desktop
 
 sudo mkdir /opt/distri
 sudo mkdir /opt/distri/scripts
@@ -68,7 +68,8 @@ sudo systemctl enable app.service
 #######################################################
 #cat /opt/distri/app/app.* > ~/Desktop/Distribuidora_Mendoza.AppImage
 cat /opt/distri/app/app.* > /opt/distri/app/dm.AppImage
-wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.desktop -P ~/.local/share/application
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.desktop -P ~/.local/share/applications
+sudo desktop-file-install ~/.local/share/applications/distri.desktop
 #sudo chmod 777 /opt/distri -R
 
 chmod +x /opt/distri/app/dm.AppImage
