@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name= app_name
-Comment= comment_optional
-Icon= app_icon
-Exec=/opt/distri/app/dm.AppImage
-Terminal=false
-Type=Application

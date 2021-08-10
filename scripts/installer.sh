@@ -18,6 +18,7 @@ sudo mkdir /opt/distri/scripts
 sudo mkdir /opt/distri/app
 sudo mkdir /opt/distri/docker
 sudo mkdir /opt/distri/docker/java
+sudo mkdir /opt/distri/images
 sudo mkdir /opt/distri/backups
 sudo mkdir /opt/distri/version
 sudo mkdir /opt/distri/cache
@@ -31,6 +32,9 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.serv
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/app.service -P /opt/distri/scripts/  
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh -P /opt/distri/scripts/ 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/app.sh -P /opt/distri/scripts/ 
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/desktop.sh -P /opt/distri/scripts/ 
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.desktop -P /opt/distri/scripts/ 
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/images/pig.png -P /opt/distri/images/ 
 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/docker-compose.yml -P /opt/distri/docker/
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java/Dockerfile -P /opt/distri/docker/java/
