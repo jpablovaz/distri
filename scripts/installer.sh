@@ -12,6 +12,7 @@ yes | sudo apt install docker-compose
 # Cleaning up old installations
 #######################################################
 sudo rm /opt/distri -R
+sudo rm ~/.local/share/application/distri.desktop
 
 sudo mkdir /opt/distri
 sudo mkdir /opt/distri/scripts
@@ -33,7 +34,7 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/app.service
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh -P /opt/distri/scripts/ 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/app.sh -P /opt/distri/scripts/ 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/desktop.sh -P /opt/distri/scripts/ 
-wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.desktop -P /opt/distri/scripts/ 
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.desktop -P ~/.local/share/application
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/images/pig.png -P /opt/distri/images/ 
 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/docker-compose.yml -P /opt/distri/docker/
