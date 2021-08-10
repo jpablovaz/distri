@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ -f "/opt/distri/scripts/running" ]]; then
+if [ -f /opt/distri/scripts/running ]; then
     wmctrl -a Distribuidora
 else
     touch /opt/distri/scripts/running
