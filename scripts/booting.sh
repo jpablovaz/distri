@@ -22,6 +22,7 @@ echo $api_cloud_version
 echo "LOCAL:"
 app_version=`cat /opt/distri/version/app_version.txt`
 api_version=`cat /opt/distri/version/api_version.txt`
+user_dir=`cat /opt/distri/scripts/user.txt`
 echo $app_version
 echo $api_version
 
@@ -35,26 +36,26 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version
 #######################################################
 if [ "$app_version" != "$app_cloud_version" ]; then
     yes | rm /opt/distri/app/*
-    yes | rm ~/Desktop/Distribuidora_Mendoza.AppImage
+    yes | rm /home/$user_dir/Desktop/Distribuidora_Mendoza.AppImage
     wget https://github.com/jpablovaz/distri/raw/main/app/app.aa -P /opt/distri/app/
     wget https://github.com/jpablovaz/distri/raw/main/app/app.ab -P /opt/distri/app/
     wget https://github.com/jpablovaz/distri/raw/main/app/app.ac -P /opt/distri/app/
     wget https://github.com/jpablovaz/distri/raw/main/app/app.ad -P /opt/distri/app/
     wget https://github.com/jpablovaz/distri/raw/main/app/app.ae -P /opt/distri/app/
     wget https://github.com/jpablovaz/distri/raw/main/app/app.af -P /opt/distri/app/
-    cat /opt/distri/app/app.* > ~/Desktop/Distribuidora_Mendoza.AppImage
-    chmod +x ~/Desktop/Distribuidora_Mendoza.AppImage
-    mkdir ~/Desktop/app_Diff
+    cat /opt/distri/app/app.* > /home/$user_dir/Desktop/Distribuidora_Mendoza.AppImage
+    chmod +x /home/$user_dir/Desktop/Distribuidora_Mendoza.AppImage
+    mkdir /home/$user_dir/Desktop/app_Diff
 else
-    mkdir ~/Desktop/app_Equal
+    mkdir /home/$user_dir/Desktop/app_Equal
 fi
 
 if [ "$api_version" != "$api_cloud_version" ]; then
     yes | rm /opt/distri/docker/java/distri.jar
     wget https://github.com/jpablovaz/distri/raw/main/docker/java/distri.jar -P /opt/distri/docker/java/
-    mkdir ~/Desktop/api_Diff
+    mkdir /home/$user_dir/Desktop/api_Diff
 else
-    mkdir ~/Desktop/api_Equal
+    mkdir /home/$user_dir/Desktop/api_Equal
 fi
 
 cd /opt/distri/docker
