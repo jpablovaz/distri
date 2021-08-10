@@ -103,8 +103,8 @@ cd /opt/distri/docker
 docker-compose up
 
 if [[ -f "$f_booting_2" ]]; then
-    yes | rm $f_booting
-    mv $f_booting_2 $f_booting
+#    yes | rm $f_booting
+#    mv $f_booting_2 $f_booting
 fi
 
 
