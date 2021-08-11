@@ -46,22 +46,22 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java/Dockerf
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/app_version.txt -P $f_v_app_2
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version.txt -P $f_v_api_2
 
-if [[ -f "$f_compose_2" ]]; then
+if [ -f "$f_compose_2" ]; then
     yes | rm $f_compose
     mv $f_compose_2 $f_compose
 fi
 
-if [[ -f "$f_docker_2" ]]; then
+if [ -f "$f_docker_2" ]; then
     yes | rm $f_docker
     mv $f_docker_2 $f_docker
 fi
 
-if [[ -f "$f_v_app_2" ]]; then
+if [ -f "$f_v_app_2" ]; then
     yes | rm $f_v_app
     mv $f_v_app_2 $f_v_app
 fi
 
-if [[ -f "$f_v_api_2" ]]; then
+if [ -f "$f_v_api_2" ]; then
     yes | rm $f_v_api
     mv $f_v_api_2 $f_v_api
 fi
@@ -79,13 +79,13 @@ if [ "$app_version" != "$app_cloud_version" ]; then
     wget https://github.com/jpablovaz/distri/raw/main/app/app.af -P /opt/distri/app/
     cat /opt/distri/app/app.* > /opt/distri/app/dm.AppImage
     chmod +x /opt/distri/app/dm.AppImage
-    if [[ -f "/home/$user_dir/Desktop/app_Diff" ]]; then
+    if [ -f "/home/$user_dir/Desktop/app_Diff" ]; then
         echo "Already exist Juancito"
     else
         mkdir /home/$user_dir/Desktop/app_Diff
     fi
 else
-    if [[ -f "/home/$user_dir/Desktop/app_Equal" ]]; then
+    if [ -f "/home/$user_dir/Desktop/app_Equal" ]; then
         echo "Already exist Juancito"
     else
         mkdir /home/$user_dir/Desktop/app_Equal
@@ -105,9 +105,7 @@ chmod +x /opt/distri/app/dm.AppImage
 cd /opt/distri/docker
 docker-compose up
 
-if [[ -f "$f_booting_2" ]]; then
-#    yes | rm $f_booting
-#    mv $f_booting_2 $f_booting
+if [ -f "$f_booting_2" ]; then
+    yes | rm $f_booting
+    mv $f_booting_2 $f_booting
 fi
-
-
