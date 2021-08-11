@@ -25,20 +25,20 @@ echo $api_version
 # Files
 #######################################################
 
-f_booting = /opt/distri/scripts/booting.sh
-f_booting_2 = /opt/distri/scripts/booting2.sh
+f_booting=/opt/distri/scripts/booting.sh
+f_booting_2=/opt/distri/scripts/booting2.sh
 
-f_compose = /opt/distri/docker/docker-compose.yml
-f_compose_2 = /opt/distri/docker/docker-compose2.yml
+f_compose=/opt/distri/docker/docker-compose.yml
+f_compose_2=/opt/distri/docker/docker-compose2.yml
 
-f_docker = /opt/distri/docker/java/Dockerfile
-f_docker_2 = /opt/distri/docker/java/Dockerfile2
+f_docker=/opt/distri/docker/java/Dockerfile
+f_docker_2=/opt/distri/docker/java/Dockerfile2
 
-f_v_app = /opt/distri/version/app_version.txt
-f_v_app_2 = /opt/distri/version/app_version2.txt
+f_v_app=/opt/distri/version/app_version.txt
+f_v_app_2=/opt/distri/version/app_version2.txt
 
-f_v_api = /opt/distri/version/api_version.txt
-f_v_api_2 = /opt/distri/version/api_version2.txt
+f_v_api=/opt/distri/version/api_version.txt
+f_v_api_2=/opt/distri/version/api_version2.txt
 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh -P $f_booting_2
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/docker-compose.yml -P $f_compose_2
@@ -46,22 +46,22 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java/Dockerf
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/app_version.txt -P $f_v_app_2
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version.txt -P $f_v_api_2
 
-if [ -f "$f_compose_2" ]; then
+if [ -f $f_compose_2 ]; then
     yes | rm $f_compose
     mv $f_compose_2 $f_compose
 fi
 
-if [ -f "$f_docker_2" ]; then
+if [ -f $f_docker_2 ]; then
     yes | rm $f_docker
     mv $f_docker_2 $f_docker
 fi
 
-if [ -f "$f_v_app_2" ]; then
+if [ -f $f_v_app_2 ]; then
     yes | rm $f_v_app
     mv $f_v_app_2 $f_v_app
 fi
 
-if [ -f "$f_v_api_2" ]; then
+if [ -f $f_v_api_2 ]; then
     yes | rm $f_v_api
     mv $f_v_api_2 $f_v_api
 fi
@@ -69,7 +69,7 @@ fi
 #######################################################
 # Reading local version
 #######################################################
-if [ "$app_version" != "$app_cloud_version" ]; then
+if [ $app_version != $app_cloud_version ]; then
     yes | rm /opt/distri/app/*
     wget https://github.com/jpablovaz/distri/raw/main/app/app.aa -P /opt/distri/app/
     wget https://github.com/jpablovaz/distri/raw/main/app/app.ab -P /opt/distri/app/
@@ -92,7 +92,7 @@ else
     fi
 fi
 
-if [ "$api_version" != "$api_cloud_version" ]; then
+if [ $api_version != $api_cloud_version ]; then
     yes | rm /opt/distri/docker/java/distri.jar
     wget https://github.com/jpablovaz/distri/raw/main/docker/java/distri.jar -P /opt/distri/docker/java/
     mkdir /home/$user_dir/Desktop/api_Diff
@@ -105,7 +105,7 @@ chmod +x /opt/distri/app/dm.AppImage
 cd /opt/distri/docker
 docker-compose up
 
-if [ -f "$f_booting_2" ]; then
+if [ -f $f_booting_2 ]; then
     yes | rm $f_booting
     mv $f_booting_2 $f_booting
 fi
