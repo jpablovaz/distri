@@ -24,21 +24,20 @@ echo $api_version
 #######################################################
 # Files
 #######################################################
-
 f_booting=/opt/distri/scripts/booting.sh
-f_booting_2=/opt/distri/scripts/booting2.sh
+f_booting_2=/opt/distri/scripts/booting2
 
 f_compose=/opt/distri/docker/docker-compose.yml
-f_compose_2=/opt/distri/docker/docker-compose2.yml
+f_compose_2=/opt/distri/docker/compose2
 
 f_docker=/opt/distri/docker/java/Dockerfile
-f_docker_2=/opt/distri/docker/java/Dockerfile2
+f_docker_2=/opt/distri/docker/java/Docker2
 
 f_v_app=/opt/distri/version/app_version.txt
-f_v_app_2=/opt/distri/version/app_version2.txt
+f_v_app_2=/opt/distri/version/app2
 
 f_v_api=/opt/distri/version/api_version.txt
-f_v_api_2=/opt/distri/version/api_version2.txt
+f_v_api_2=/opt/distri/version/api2
 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh -P $f_booting_2
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/docker-compose.yml -P $f_compose_2
@@ -46,24 +45,28 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java/Dockerf
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/app_version.txt -P $f_v_app_2
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version.txt -P $f_v_api_2
 
-if [ -f $f_compose_2 ]; then
+if [ -f $f_compose_2/docker-compose.yml ]; then
     yes | rm $f_compose
-    mv $f_compose_2 $f_compose
+    mv $f_compose_2/docker-compose.yml $f_compose
+    yes | rm $f_compose_2 -R
 fi
 
-if [ -f $f_docker_2 ]; then
+if [ -f $f_docker_2/Dockerfile ]; then
     yes | rm $f_docker
-    mv $f_docker_2 $f_docker
+    mv $f_docker_2/Dockerfile $f_docker
+    yes | rm $f_docker_2 -R
 fi
 
-if [ -f $f_v_app_2 ]; then
+if [ -f $f_v_app_2/app_version.txt ]; then
     yes | rm $f_v_app
-    mv $f_v_app_2 $f_v_app
+    mv $f_v_app_2/app_version.txt $f_v_app
+    yes | rm $f_v_app_2 -R
 fi
 
-if [ -f $f_v_api_2 ]; then
+if [ -f $f_v_api_2/api_version.txt ]; then
     yes | rm $f_v_api
-    mv $f_v_api_2 $f_v_api
+    mv $f_v_api_2/api_version.txt $f_v_api
+    yes | rm $f_v_api_2 -R
 fi
 
 #######################################################
@@ -105,7 +108,8 @@ chmod +x /opt/distri/app/dm.AppImage
 cd /opt/distri/docker
 docker-compose up
 
-if [ -f $f_booting_2 ]; then
+if [ -f $f_booting_2/booting.sh ]; then
     yes | rm $f_booting
-    mv $f_booting_2 $f_booting
+    mv $f_booting_2/booting.sh $f_booting
+    yes | rm $f_booting_2 -R
 fi
