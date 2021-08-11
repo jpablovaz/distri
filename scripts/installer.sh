@@ -88,7 +88,7 @@ EOF
 #sudo chmod 777 /opt/distri -R
 rm /opt/distri/app/app.*
 sudo desktop-file-install ~/.local/share/applications/distri.desktop
-#sudo chmod 777 /opt/distri -R
+sudo chmod 777 /opt/distri -R
 
 chmod +x /opt/distri/app/dm.AppImage
 echo $USER > /opt/distri/scripts/user.txt
