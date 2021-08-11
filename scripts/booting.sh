@@ -48,25 +48,25 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version
 if [ -f $f_compose_2/docker-compose.yml ]; then
     yes | rm $f_compose
     mv $f_compose_2/docker-compose.yml $f_compose
-    yes | rm $f_compose_2 -R
+    yes | rm -rf $f_compose_2
 fi
 
 if [ -f $f_docker_2/Dockerfile ]; then
     yes | rm $f_docker
     mv $f_docker_2/Dockerfile $f_docker
-    yes | rm $f_docker_2 -R
+    yes | rm -rf $f_docker_2
 fi
 
 if [ -f $f_v_app_2/app_version.txt ]; then
     yes | rm $f_v_app
     mv $f_v_app_2/app_version.txt $f_v_app
-    yes | rm $f_v_app_2 -R
+    yes | rm -rf $f_v_app_2
 fi
 
 if [ -f $f_v_api_2/api_version.txt ]; then
     yes | rm $f_v_api
     mv $f_v_api_2/api_version.txt $f_v_api
-    yes | rm $f_v_api_2 -R
+    yes | rm -rf $f_v_api_2
 fi
 
 #######################################################
@@ -111,5 +111,5 @@ docker-compose up
 if [ -f $f_booting_2/booting.sh ]; then
     yes | rm $f_booting
     mv $f_booting_2/booting.sh $f_booting
-    yes | rm $f_booting_2 -R
+    yes | rm -rf $f_booting_2
 fi
