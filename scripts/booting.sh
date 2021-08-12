@@ -57,9 +57,10 @@ if [ $app_version != $app_cloud_version ]; then
     wget https://github.com/jpablovaz/distri/raw/main/app/app.af -P /opt/distri/app/
     cat /opt/distri/app/app.* > /home/$username/.distri/dm.AppImage
     chmod +x /home/$username/.distri/dm.AppImage
+fi
 if [ $api_version != $api_cloud_version ]; then
     rm /opt/distri/docker/java/distri.jar
     wget https://github.com/jpablovaz/distri/raw/main/docker/java/distri.jar -P /opt/distri/docker/java/
-
+fi
 cd /opt/distri/docker
 docker-compose up
