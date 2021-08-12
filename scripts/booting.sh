@@ -1,7 +1,11 @@
 #!/bin/bash
-rm /opt/distri/app/running
 username=`cat /opt/distri/scripts/user.txt`
 temp=/opt/distri/scripts/temp
+running=/opt/distri/scripts/running
+
+if ! [ -f $running ]; then
+    touch $running
+fi
 
 #######################################################
 # Versions
@@ -63,4 +67,7 @@ if [ $api_version != $api_cloud_version ]; then
     wget https://github.com/jpablovaz/distri/raw/main/docker/java/distri.jar -P /opt/distri/docker/java/
 fi
 cd /opt/distri/docker
+
+rm $running
+
 docker-compose up
