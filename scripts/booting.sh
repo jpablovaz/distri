@@ -1,23 +1,37 @@
 #!/bin/bash
 rm /opt/distri/app/running
-#######################################################
-# Reading cloud version
-#######################################################
-app_cloud_version="`wget -qO- https://raw.githubusercontent.com/jpablovaz/distri/main/version/app_version.txt`"
-api_cloud_version="`wget -qO- https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version.txt`"
+username=`cat /opt/distri/scripts/user.txt`
+temp=/opt/distri/scripts/temp
 
 #######################################################
-# Reading local version
+# Versions
 #######################################################
 app_version=`cat /opt/distri/version/app_version.txt`
 api_version=`cat /opt/distri/version/api_version.txt`
-username=`cat /opt/distri/scripts/user.txt`
+temp_app_version=$temp/app_version.txt
+temp_api_version=$temp/api_version.txt
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/app_version.txt -P $temp
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/version/api_version.txt -P $temp
+
+if [ -f $temp_app_version ]; then
+    app_cloud_version=`cat $temp_app_version`
+    rm $temp_app_version
+    echo $app_cloud_version > /opt/distri/version/app_version.txt
+else
+    app_cloud_version=$app_version
+fi
+
+if [ -f $temp_api_version ]; then
+    api_cloud_version=`cat $temp_api_version`
+    rm $temp_api_version
+    echo $api_cloud_version > /opt/distri/version/api_version.txt
+else
+    api_cloud_version=$api_version
+fi
 
 #######################################################
 # Files
 #######################################################
-temp=/opt/distri/scripts/temp
-
 booting=/opt/distri/scripts/booting.sh
 compose=/opt/distri/docker/docker-compose.yml
 docker=/opt/distri/docker/java/Dockerfile
