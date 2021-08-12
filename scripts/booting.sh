@@ -62,7 +62,7 @@ if [ $app_version != $app_cloud_version ]; then
     wget https://github.com/jpablovaz/distri/raw/main/app/app.ae -P /opt/distri/app/
     wget https://github.com/jpablovaz/distri/raw/main/app/app.af -P /opt/distri/app/
     cat /opt/distri/app/app.* > /home/$username/.distri/dm.AppImage
-    chmod +x /opt/distri/app/dm.AppImage
+    chmod +x /home/$username/.distri/dm.AppImage
     if [ -f "/home/$username/Desktop/app_Diff" ]; then
         echo "Already exist Juancito"
     else
@@ -83,8 +83,6 @@ if [ $api_version != $api_cloud_version ]; then
 else
     mkdir /home/$username/Desktop/api_Equal
 fi
-
-chmod +x /opt/distri/app/dm.AppImage
 
 cd /opt/distri/docker
 docker-compose up
