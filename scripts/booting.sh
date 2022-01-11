@@ -59,6 +59,7 @@ if [ $app_version != $app_cloud_version ]; then
     wget https://github.com/jpablovaz/distri/raw/main/app/app.ad -P /opt/distri/app/
     wget https://github.com/jpablovaz/distri/raw/main/app/app.ae -P /opt/distri/app/
     wget https://github.com/jpablovaz/distri/raw/main/app/app.af -P /opt/distri/app/
+    wget https://github.com/jpablovaz/distri/raw/main/app/app.ag -P /opt/distri/app/
     cat /opt/distri/app/app.* > /home/$username/.distri/dm.AppImage
     chmod +x /home/$username/.distri/dm.AppImage
 fi
