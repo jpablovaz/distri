@@ -7,7 +7,10 @@ yes | sudo apt update
 yes | sudo apt upgrade
 yes | sudo apt install docker.io
 yes | sudo apt install docker-compose
-
+#######################################################
+# NMAP Installation
+#######################################################
+yes | sudo apt-get install nmap
 #######################################################
 # Cleaning up old installations
 #######################################################
