@@ -1,5 +1,5 @@
 #!/bin/bash
-
+https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/installer.shgit 	
 #######################################################
 # DOCKER Installation
 #######################################################
