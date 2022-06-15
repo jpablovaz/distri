@@ -77,7 +77,7 @@ docker-compose up
 # PRINTING OBSERVER
 #######################################################
 java_path=/opt/distri/docker/java/pdf/
-desktop_path=/home/$username/Desktop/Distribuidora/
+desktop_path=/home/$username/Escritorio/Distribuidora/
 
 rm $java_path -R
 mkdir $java_path
