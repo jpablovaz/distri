@@ -37,17 +37,22 @@ fi
 #######################################################
 compose=/opt/distri/docker/docker-compose.yml
 docker=/opt/distri/docker/java/Dockerfile
+print=/opt/distri/scripts/print.sh
 temp_compose=$temp/docker-compose.yml
 temp_docker=$temp/Dockerfile
+temp_print=$temp/print.sh
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/docker-compose.yml -P $temp
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java/Dockerfile -P $temp
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/print.sh -P $temp
 if [ -f $temp_compose ]; then
     mv $temp_compose $compose
 fi
 if [ -f $temp_docker ]; then
     mv $temp_docker $docker
 fi
-
+if [ -f $temp_print ]; then
+    mv $temp_print $print
+fi
 #######################################################
 # Reading local version
 #######################################################
