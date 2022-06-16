@@ -5,7 +5,7 @@ username=`cat /opt/distri/scripts/user.txt`
 java_path=/opt/distri/docker/java/pdf/
 desktop_path=/home/$username/Escritorio/Distribuidora/
 
-sleep 1
+sleep 10
 
 rm $java_path -R
 mkdir $java_path
@@ -24,6 +24,7 @@ do
 		if [ $c1 = '@' ]; then
 			if [ $c2 = 'C' ] || [ $c2 = 'B' ]; then
 				cp $java_path$f $desktop_path$c4
+				chmod 777 $desktop_path$c4
 			fi
 			if [ $c2 = 'P' ] || [ $c2 = 'B' ]; then
 				lp $java_path$f
