@@ -5,8 +5,6 @@ username=`cat /opt/distri/scripts/user.txt`
 java_path=/opt/distri/docker/java/pdf/
 desktop_path=/home/$username/Escritorio/Distribuidora/
 
-sleep 10
-
 yes | rm $java_path -R
 yes | mkdir $java_path
 yes | rm $desktop_path -R
