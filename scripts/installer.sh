@@ -25,6 +25,7 @@ sudo mkdir /opt/distri/scripts/temp
 sudo mkdir /opt/distri/app
 sudo mkdir /opt/distri/docker
 sudo mkdir /opt/distri/docker/java
+sudo mkdir /opt/distri/docker/java/pdf
 sudo mkdir /opt/distri/images
 sudo mkdir /opt/distri/backups
 sudo mkdir /opt/distri/version
