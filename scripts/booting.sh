@@ -45,14 +45,17 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/docker-compo
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java/Dockerfile -P $temp
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/print.sh -P $temp
 if [ -f $temp_compose ]; then
+	chmod 777 $compose
     rm $compose
     mv $temp_compose $compose
 fi
 if [ -f $temp_docker ]; then
+	chmod 777 $docker
     rm $docker
     mv $temp_docker $docker
 fi
 if [ -f $temp_print ]; then
+	chmod 777 $print
     rm $print
     mv $temp_print $print
 fi
