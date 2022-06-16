@@ -7,5 +7,5 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh 
 if [ -f $temp_boot ]; then
     mv $temp_boot $boot
 fi
-sh /opt/distri/scripts/print.sh &
+#sh /opt/distri/scripts/print.sh &
 sh $boot
