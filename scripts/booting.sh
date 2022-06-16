@@ -77,5 +77,5 @@ cd /opt/distri/docker
 rm $running
 
 sh /opt/distri/scripts/print.sh
-sleep 1 docker-compose up &
-sleep 5 /home/$username/.distri/dm.AppImage
+sleep 25 docker-compose up &
+sleep 25 /home/$username/.distri/dm.AppImage
