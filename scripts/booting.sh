@@ -77,7 +77,7 @@ cd /opt/distri/docker
 
 rm $running
 
-( sleep 20; sh /opt/distri/scripts/print.sh ) &
+( sleep 20 sh /opt/distri/scripts/print.sh ) &
 #sleep 45 & sh /opt/distri/scripts/print.sh &
 #sleep 40 &&& docker-compose up &
 docker-compose up
