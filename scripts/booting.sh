@@ -76,6 +76,7 @@ cd /opt/distri/docker
 
 rm $running
 
-sh ./print.sh && docker-compose up
+sh ./print.sh
+#&& docker-compose up
 
 
