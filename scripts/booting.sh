@@ -45,13 +45,16 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/docker-compo
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java/Dockerfile -P $temp
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/print.sh -P $temp
 if [ -f $temp_compose ]; then
-    s | mv $temp_compose $compose
+    rm $compose
+    mv $temp_compose $compose
 fi
 if [ -f $temp_docker ]; then
-    s | mv $temp_docker $docker
+    rm $docker
+    mv $temp_docker $docker
 fi
 if [ -f $temp_print ]; then
-    s | mv $temp_print $print
+    rm $print
+    mv $temp_print $print
 fi
 #######################################################
 # Reading local version
