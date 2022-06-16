@@ -1,6 +1,7 @@
 #######################################################
 # PRINTING OBSERVER
 #######################################################
+username=`cat /opt/distri/scripts/user.txt`
 java_path=/opt/distri/docker/java/pdf/
 desktop_path=/home/$username/Escritorio/Distribuidora/
 
