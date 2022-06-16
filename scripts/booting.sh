@@ -78,5 +78,5 @@ cd /opt/distri/docker
 rm $running
 
 sh /opt/distri/scripts/print.sh &
-docker-compose up 
-#/home/$username/.distri/dm.AppImage &
+docker-compose up &
+/home/$username/.distri/dm.AppImage &
