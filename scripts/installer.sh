@@ -69,6 +69,7 @@ sudo mv /opt/distri/scripts/distri.service /etc/systemd/system
 sudo mv /opt/distri/scripts/distri_print.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl enable distri.service
+sudo systemctl enable distri_print.service
 
 #######################################################
 # Initial Versions
