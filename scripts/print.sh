@@ -5,12 +5,12 @@ username=`cat /opt/distri/scripts/user.txt`
 java_path=/opt/distri/docker/java/pdf/
 desktop_path=/home/$username/Escritorio/Distribuidora/
 
-yes | rm $java_path -R
-yes | mkdir $java_path
-yes | rm $desktop_path -R
-yes | mkdir $desktop_path
-yes | chmod 777 $java_path -R
-yes | chmod 777 $desktop_path -R
+rm $java_path -R
+mkdir $java_path
+rm $desktop_path -R
+mkdir $desktop_path
+chmod 777 $java_path -R
+chmod 777 $desktop_path -R
 while true
 do
 	sleep 4
