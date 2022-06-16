@@ -8,7 +8,7 @@ desktop_path=/home/$username/Escritorio/Distribuidora/
 rm -f $java_path -R
 mkdir $java_path
 rm -f $desktop_path -R
-mkdir -f $desktop_path
+mkdir $desktop_path
 chmod 777 $java_path -R
 chmod 777 $desktop_path -R
 while true
