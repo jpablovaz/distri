@@ -52,6 +52,7 @@ if [ -f $temp_docker ]; then
 fi
 if [ -f $temp_print ]; then
     mv -f $temp_print $print
+	chmod +x $print
 fi
 #######################################################
 # Reading local version
