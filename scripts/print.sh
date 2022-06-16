@@ -5,10 +5,10 @@ sleep 10
 username=`cat /opt/distri/scripts/user.txt`
 java_path=/opt/distri/docker/java/pdf/
 desktop_path=/home/$username/Escritorio/Distribuidora/
-rm $java_path -R
+rm -f $java_path -R
 mkdir $java_path
-rm $desktop_path -R
-mkdir $desktop_path
+rm -f $desktop_path -R
+mkdir -f $desktop_path
 chmod 777 $java_path -R
 chmod 777 $desktop_path -R
 while true
@@ -26,7 +26,7 @@ do
 			if [ $c2 = 'P' ] || [ $c2 = 'B' ]; then
 				lp $java_path$f
 			fi
-			rm $java_path$f
+			rm -f $java_path$f
 			chmod 777 $desktop_path$c3
 		fi
 	done
