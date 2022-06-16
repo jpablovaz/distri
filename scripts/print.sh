@@ -1,10 +1,10 @@
 #######################################################
 # PRINTING OBSERVER
 #######################################################
+sleep 14
 username=`cat /opt/distri/scripts/user.txt`
 java_path=/opt/distri/docker/java/pdf/
 desktop_path=/home/$username/Escritorio/Distribuidora/
-
 rm $java_path -R
 mkdir $java_path
 rm $desktop_path -R
