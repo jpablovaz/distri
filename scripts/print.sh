@@ -9,7 +9,6 @@ rm $java_path -R
 mkdir $java_path
 rm $desktop_path -R
 mkdir $desktop_path
-mkdir /home/distri/test
 chmod 777 $java_path -R
 chmod 777 $desktop_path -R
 while true
