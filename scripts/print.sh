@@ -7,12 +7,12 @@ desktop_path=/home/$username/Escritorio/Distribuidora/
 
 sleep 10
 
-rm $java_path -R
-mkdir $java_path
-rm $desktop_path -R
-mkdir $desktop_path
-chmod 777 $java_path -R
-chmod 777 $desktop_path -R
+yes | rm $java_path -R
+yes | mkdir $java_path
+yes | rm $desktop_path -R
+yes | mkdir $desktop_path
+yes | chmod 777 $java_path -R
+yes | chmod 777 $desktop_path -R
 while true
 do
 	sleep 4
