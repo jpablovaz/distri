@@ -77,5 +77,5 @@ cd /opt/distri/docker
 
 rm $running
 docker-compose up
-nohup sh /opt/distri/scripts/print.sh &
+#nohup sh /opt/distri/scripts/print.sh &
 #/home/$username/.distri/dm.AppImage &
