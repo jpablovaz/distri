@@ -78,5 +78,3 @@ rm $running
 
 sh /opt/distri/scripts/print.sh
 docker-compose up
-
-

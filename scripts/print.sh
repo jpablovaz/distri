@@ -11,7 +11,8 @@ rm $java_path -R
 mkdir $java_path
 rm $desktop_path -R
 mkdir $desktop_path
-
+chmod 777 $java_path -R
+chmod 777 $desktop_path -R
 while true
 do
 	sleep 4
