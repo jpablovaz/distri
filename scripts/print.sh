@@ -23,13 +23,13 @@ do
 		c3=`echo $f | cut -b 3-100`
 		if [ $c1 = '@' ]; then
 			if [ $c2 = 'C' ] || [ $c2 = 'B' ]; then
-				cp $java_path$f $desktop_path$c4
+				cp $java_path$f $desktop_path$c3
 			fi
 			if [ $c2 = 'P' ] || [ $c2 = 'B' ]; then
 				lp $java_path$f
 			fi
 			rm $java_path$f
-			chmod 777 $desktop_path$c4
+			chmod 777 $desktop_path$c3
 		fi
 	done
 done
