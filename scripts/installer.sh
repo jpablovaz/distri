@@ -51,6 +51,9 @@ wget https://raw.githubusercontent.com/jpablovaz/distri/main/images/pig.png -P ~
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri-cron -P /opt/distri/scripts/ 
 crontab /opt/distri/scripts/distri-cron
 
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh -P /opt/distri/scripts/
+sudo chmod +x /opt/distri/scripts/booting.sh
+
 cat > ~/.local/share/applications/distri.desktop <<EOF
 [Desktop Entry]
 Name=Distribuidora
