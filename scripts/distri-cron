@@ -1,0 +1,3 @@
+@reboot sh /opt/distri/script/booting.sh
+@reboot sh /opt/distri/script/print.sh
+@reboot date >> ~/Escritorio/jojo.txt

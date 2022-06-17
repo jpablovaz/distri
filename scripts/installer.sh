@@ -41,12 +41,15 @@ echo $USER > /opt/distri/scripts/user.txt
 #######################################################
 # Setting .desktop
 #######################################################
-wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.service -P /opt/distri/scripts/  
+#wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.service -P /opt/distri/scripts/  
 #wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/print.service -P /opt/distri/scripts/  
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/init.sh -P /opt/distri/scripts/ 
-#wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/print.sh -P /opt/distri/scripts/ 
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/print.sh -P /opt/distri/scripts/ 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/desktop.sh -P ~/.distri/ 
 wget https://raw.githubusercontent.com/jpablovaz/distri/main/images/pig.png -P ~/.distri/
+
+wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri-cron -P /opt/distri/scripts/ 
+crontab /opt/distri/scripts/distri-cron
 
 cat > ~/.local/share/applications/distri.desktop <<EOF
 [Desktop Entry]
@@ -65,12 +68,12 @@ sudo desktop-file-install ~/.local/share/applications/distri.desktop
 # Setting Up Boot Script
 #######################################################
 sudo chmod +x /opt/distri/scripts/init.sh
-#sudo chmod +x /opt/distri/scripts/print.sh
+sudo chmod +x /opt/distri/scripts/print.sh
 sudo chmod +x ~/.distri/desktop.sh
-sudo mv /opt/distri/scripts/distri.service /etc/systemd/system
+#sudo mv /opt/distri/scripts/distri.service /etc/systemd/system
 #sudo mv /opt/distri/scripts/print.service /etc/systemd/system
-sudo systemctl daemon-reload
-sudo systemctl enable distri.service
+#sudo systemctl daemon-reload
+#sudo systemctl enable distri.service
 #sudo systemctl enable print.service
 
 #######################################################
