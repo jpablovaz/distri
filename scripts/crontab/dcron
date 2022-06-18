@@ -1,4 +1,4 @@
-@reboot sh /opt/distri/scripts/crontab/runner/back_end.sh
-@reboot sh /opt/distri/scripts/crontab/runner/front_end.sh
-@reboot sh /opt/distri/scripts/crontab/runner/printer.sh
-@reboot date >> ~/Escritorio/jojo.txt
+@reboot sh /opt/distri/scripts/crontab/runner/back_end.sh &
+@reboot sh /opt/distri/scripts/crontab/runner/front_end.sh &
+@reboot sh /opt/distri/scripts/crontab/runner/printer.sh &
+@reboot date >> ~/Escritorio/jojo.txt &
