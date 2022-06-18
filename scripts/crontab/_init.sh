@@ -9,4 +9,5 @@ wget $github/updater.sh -P $temp
 if [ -f $temp_updater ]; then
     mv $temp_updater $updater
 fi
+chmod +x $updater
 sh $updater
