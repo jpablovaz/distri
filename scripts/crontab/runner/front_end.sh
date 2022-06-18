@@ -41,7 +41,6 @@ if [ $front_end_version != $front_end_cloud_version ]; then
     cat /opt/distri/front_end/front_end.* > /home/$username/.distri/dm.AppImage
     chmod +x /home/$username/.distri/dm.AppImage
 fi
-cat /opt/distri/front_end/front_end.* > /home/$username/Escritorio/dm.AppImage
 ########################################################
 # Update in process Flag Off
 ########################################################
