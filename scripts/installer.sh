@@ -39,11 +39,11 @@ sudo chmod 777 /home/$USER/Escritorio/.distri -R
 # Setting .desktop
 #######################################################
 github=https://raw.githubusercontent.com/jpablovaz/distri/main
-wget $github/scripts/crontab/_init.sh -P /opt/distri/scripts/crontab
-wget $github/scripts/crontab/dcron -P /opt/distri/scripts/crontab
+sudo wget $github/scripts/crontab/_init.sh -P /opt/distri/scripts/crontab
+sudo wget $github/scripts/crontab/dcron -P /opt/distri/scripts/crontab
 crontab /opt/distri/scripts/crontab/dcron
-wget $github/scripts/desktop/desktop.sh -P ~/.distri/ 
-wget $github/scripts/desktop/pig.png -P ~/.distri/
+sudo wget $github/scripts/desktop/desktop.sh -P ~/.distri/ 
+sudo wget $github/scripts/desktop/pig.png -P ~/.distri/
 sudo chmod +x /opt/distri/scripts/crontab/_init.sh
 sudo chmod +x ~/.distri/desktop.sh
 
