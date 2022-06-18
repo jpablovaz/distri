@@ -41,16 +41,17 @@ echo $USER > /opt/distri/scripts/user.txt
 #wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.service -P /opt/distri/scripts/  
 #wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/print.service -P /opt/distri/scripts/  
 github=https://raw.githubusercontent.com/jpablovaz/distri/main
-wget $github/scripts/init.sh -P /opt/distri/scripts/ 
-wget $github/scripts/print.sh -P /opt/distri/scripts/ 
-wget $github/scripts/desktop.sh -P ~/.distri/ 
-wget $github/images/pig.png -P ~/.distri/
+wget $github/scripts/crontab/_init.sh -P /opt/distri/scripts/crontab
+#wget $github/scripts/print.sh -P /opt/distri/scripts/ 
+#wget $github/scripts/desktop.sh -P ~/.distri/ 
+#wget $github/images/pig.png -P ~/.distri/
 
-wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri-cron -P /opt/distri/scripts/ 
-crontab /opt/distri/scripts/distri-cron
+#wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri-cron -P /opt/distri/scripts/ 
+#crontab /opt/distri/scripts/distri-cron
 
-wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh -P /opt/distri/scripts/
-sudo chmod +x /opt/distri/scripts/booting.sh
+#wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh -P /opt/distri/scripts/
+sudo chmod +x /opt/distri/scripts/crontab/_init.sh
+sh /opt/distri/scripts/crontab/_init.sh
 
 cat > ~/.local/share/applications/distri.desktop <<EOF
 [Desktop Entry]
@@ -66,7 +67,7 @@ sudo desktop-file-install ~/.local/share/applications/distri.desktop
 #######################################################
 # Setting Up Boot Script
 #######################################################
-sudo chmod +x /opt/distri/scripts/crontab/_init.sh
+#sudo chmod +x /opt/distri/scripts/crontab/_init.sh
 #sudo chmod +x /opt/distri/scripts/print.sh
 #sudo chmod +x ~/.distri/desktop.sh
 
