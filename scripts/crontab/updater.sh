@@ -7,8 +7,6 @@ temp=/opt/distri/scripts/temp
 # dcron
 dcron=$base/dcron
 temp_dcron=$temp/dcron
-$dcron >> ~/Escritorio/out1.txt
-dcron >> ~/Escritorio/out2.txt
 wget $github/dcron -P $temp
 if [ -f $temp_dcron ]; then
     mv $temp_dcron $dcron
