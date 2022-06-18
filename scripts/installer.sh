@@ -44,7 +44,7 @@ wget $github/scripts/crontab/_init.sh -P /opt/distri/scripts/crontab
 wget $github/scripts/desktop/desktop.sh -P ~/.distri/ 
 wget $github/scripts/desktop/pig.png -P ~/.distri/
 sudo chmod +x /opt/distri/scripts/crontab/_init.sh
-sudo chmod +x ~/.distri.sh
+sudo chmod +x ~/.distri/desktop.sh
 #sh /opt/distri/scripts/crontab/_init.sh
 
 cat > ~/.local/share/applications/distri.desktop <<EOF

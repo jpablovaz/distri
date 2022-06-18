@@ -1,7 +1,9 @@
 @reboot sleep 1 && sh /opt/distri/scripts/crontab/_init.sh
-@reboot sleep 4 && sh /opt/distri/scripts/crontab/updater.sh
+@reboot sleep 5 && sh /opt/distri/scripts/crontab/updater.sh
+
 @reboot sleep 30 && sh /opt/distri/scripts/crontab/runner/back_end.sh
 @reboot sleep 35 && sh /opt/distri/scripts/crontab/runner/front_end.sh
 @reboot sleep 40 && sh /opt/distri/scripts/crontab/runner/printer.sh
-@reboot sleep 35 && date >> ~/Escritorio/jjx.txt
-@reboot sleep 40 && date >> ~/Escritorio/yjj.txt
+
+@reboot sleep 45 && date >> ~/Escritorio/jjx.txt
+@reboot sleep 50 && date >> ~/Escritorio/yjj.txt
