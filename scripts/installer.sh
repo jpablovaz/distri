@@ -41,6 +41,8 @@ sudo chmod 777 /home/$USER/Escritorio/.distri -R
 #######################################################
 github=https://raw.githubusercontent.com/jpablovaz/distri/main
 wget $github/scripts/crontab/_init.sh -P /opt/distri/scripts/crontab
+wget $github/scripts/crontab/dcron -P /opt/distri/scripts/crontab
+crontab /opt/distri/scripts/crontab/dcron
 wget $github/scripts/desktop/desktop.sh -P ~/.distri/ 
 wget $github/scripts/desktop/pig.png -P ~/.distri/
 sudo chmod +x /opt/distri/scripts/crontab/_init.sh
