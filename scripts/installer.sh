@@ -45,9 +45,6 @@ sudo wget $github/scripts/crontab/dcron -P /opt/distri/scripts/crontab
 crontab /opt/distri/scripts/crontab/dcron
 sudo wget $github/scripts/desktop/desktop.sh -P ~/.distri/ 
 sudo wget $github/scripts/desktop/pig.png -P ~/.distri/
-sudo chmod +x /opt/distri/scripts/crontab/_init.sh
-sudo chmod +x ~/.distri/desktop.sh
-
 cat > ~/.local/share/applications/distri.desktop <<EOF
 [Desktop Entry]
 Name=Distribuidora
@@ -63,6 +60,10 @@ sudo desktop-file-install ~/.local/share/applications/distri.desktop
 # Setting Up Boot Script
 #######################################################
 sudo chmod +x ~/.distri/desktop.sh
+sudo chmod +x /opt/distri/scripts/crontab/_init.sh
+sudo chmod +x ~/.distri/desktop.sh
+
+
 #sudo mv /opt/distri/scripts/distri.service /etc/systemd/system
 #sudo mv /opt/distri/scripts/print.service /etc/systemd/system
 #sudo systemctl daemon-reload
