@@ -63,7 +63,6 @@ sudo chmod +x ~/.distri/desktop.sh
 sudo chmod +x /opt/distri/scripts/crontab/_init.sh
 sudo chmod +x ~/.distri/desktop.sh
 
-
 #sudo mv /opt/distri/scripts/distri.service /etc/systemd/system
 #sudo mv /opt/distri/scripts/print.service /etc/systemd/system
 #sudo systemctl daemon-reload
