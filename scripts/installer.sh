@@ -26,7 +26,6 @@ sudo mkdir /opt/distri/front_end
 sudo mkdir /opt/distri/docker
 sudo mkdir /opt/distri/docker/java
 sudo mkdir /opt/distri/docker/java/pdf
-sudo mkdir /opt/distri/images
 sudo mkdir /opt/distri/backups
 sudo mkdir /opt/distri/version
 sudo mkdir /opt/distri/cache
@@ -42,8 +41,8 @@ sudo chmod 777 /home/$USER/Escritorio/.distri -R
 #######################################################
 github=https://raw.githubusercontent.com/jpablovaz/distri/main
 wget $github/scripts/crontab/_init.sh -P /opt/distri/scripts/crontab
-wget $github/scripts/desktop.sh -P ~/.distri/ 
-wget $github/images/pig.png -P ~/.distri/
+wget $github/scripts/desktop/desktop.sh -P ~/.distri/ 
+wget $github/scripts/desktop/pig.png -P ~/.distri/
 sudo chmod +x /opt/distri/scripts/crontab/_init.sh
 sudo chmod +x ~/.distri.sh
 sh /opt/distri/scripts/crontab/_init.sh
