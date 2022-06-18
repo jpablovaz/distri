@@ -4,9 +4,9 @@ base=/opt/distri/scripts/crontab
 temp=/opt/distri/scripts/temp
 ################################################
 # dcron
-dcron=$base/dcron.sh
-temp_dcron=$temp/dcron.sh
-wget $github/dcron.sh -P $temp
+dcron=$base/dcron
+temp_dcron=$temp/dcron
+wget $github/dcron -P $temp
 if [ -f $temp_dcron ]; then
     mv $temp_dcron $dcron
 fi
