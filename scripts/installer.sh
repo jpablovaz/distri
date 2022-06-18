@@ -29,7 +29,6 @@ sudo mkdir /opt/distri/docker/java/pdf
 sudo mkdir /opt/distri/backups
 sudo mkdir /opt/distri/version
 sudo mkdir /opt/distri/cache
-sudo chmod 777 /opt/distri -R
 #######################################################
 # Setting $User
 #######################################################
@@ -46,7 +45,7 @@ crontab /opt/distri/scripts/crontab/dcron
 wget $github/scripts/desktop/desktop.sh -P ~/.distri/ 
 wget $github/scripts/desktop/pig.png -P ~/.distri/
 sudo chmod +x /opt/distri/scripts/crontab/_init.sh
-sudo chmod 777 /opt/distri/scripts/crontab/_init.sh
+#sudo chmod 777 /opt/distri/scripts/crontab/_init.sh
 sudo chmod +x ~/.distri/desktop.sh
 #sh /opt/distri/scripts/crontab/_init.sh
 
@@ -65,6 +64,7 @@ sudo desktop-file-install ~/.local/share/applications/distri.desktop
 # Setting Up Boot Script
 #######################################################
 sudo chmod +x ~/.distri/desktop.sh
+sudo chmod 777 /opt/distri -R
 #sudo mv /opt/distri/scripts/distri.service /etc/systemd/system
 #sudo mv /opt/distri/scripts/print.service /etc/systemd/system
 #sudo systemctl daemon-reload
