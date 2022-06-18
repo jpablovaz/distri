@@ -35,22 +35,17 @@ sudo chmod 777 /opt/distri -R
 # Setting $User
 #######################################################
 echo $USER > /opt/distri/scripts/user.txt
+sudo mkdir /home/$USER/Escritorio/.distri
+sudo chmod 777 /home/$USER/Escritorio/.distri -R
 #######################################################
 # Setting .desktop
 #######################################################
-#wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri.service -P /opt/distri/scripts/  
-#wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/print.service -P /opt/distri/scripts/  
 github=https://raw.githubusercontent.com/jpablovaz/distri/main
 wget $github/scripts/crontab/_init.sh -P /opt/distri/scripts/crontab
-#wget $github/scripts/print.sh -P /opt/distri/scripts/ 
-#wget $github/scripts/desktop.sh -P ~/.distri/ 
-#wget $github/images/pig.png -P ~/.distri/
-
-#wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/distri-cron -P /opt/distri/scripts/ 
-#crontab /opt/distri/scripts/distri-cron
-
-#wget https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/booting.sh -P /opt/distri/scripts/
+wget $github/scripts/desktop.sh -P ~/.distri/ 
+wget $github/images/pig.png -P ~/.distri/
 sudo chmod +x /opt/distri/scripts/crontab/_init.sh
+sudo chmod +x ~/.distri.sh
 sh /opt/distri/scripts/crontab/_init.sh
 
 cat > ~/.local/share/applications/distri.desktop <<EOF
@@ -67,11 +62,7 @@ sudo desktop-file-install ~/.local/share/applications/distri.desktop
 #######################################################
 # Setting Up Boot Script
 #######################################################
-#sudo chmod +x /opt/distri/scripts/crontab/_init.sh
-#sudo chmod +x /opt/distri/scripts/print.sh
-#sudo chmod +x ~/.distri/desktop.sh
-
-
+sudo chmod +x ~/.distri/desktop.sh
 #sudo mv /opt/distri/scripts/distri.service /etc/systemd/system
 #sudo mv /opt/distri/scripts/print.service /etc/systemd/system
 #sudo systemctl daemon-reload
