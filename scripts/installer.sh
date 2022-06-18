@@ -46,6 +46,7 @@ crontab /opt/distri/scripts/crontab/dcron
 wget $github/scripts/desktop/desktop.sh -P ~/.distri/ 
 wget $github/scripts/desktop/pig.png -P ~/.distri/
 sudo chmod +x /opt/distri/scripts/crontab/_init.sh
+sudo chmod 777 /opt/distri/scripts/crontab/_init.sh
 sudo chmod +x ~/.distri/desktop.sh
 #sh /opt/distri/scripts/crontab/_init.sh
 
