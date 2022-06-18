@@ -9,6 +9,7 @@ temp_dcron=$temp/dcron
 wget $github/dcron -P $temp
 if [ -f $temp_dcron ]; then
     mv $temp_dcron $dcron
+	chmod 777 $dcron
 fi
 crontab $dcron
 ################################################
