@@ -1,5 +1,5 @@
 @reboot sleep 30 && sh /opt/distri/scripts/crontab/runner/back_end.sh
 @reboot sleep 35 && sh /opt/distri/scripts/crontab/runner/front_end.sh
 @reboot sleep 40 && sh /opt/distri/scripts/crontab/runner/printer.sh
-@reboot sleep 35 && date >> ~/Escritorio/jojo.txt
-@reboot sleep 40 && date >> ~/Escritorio/jiji.txt
+@reboot sleep 35 && date >> ~/Escritorio/jxjx.txt
+@reboot sleep 40 && date >> ~/Escritorio/jyjy.txt
