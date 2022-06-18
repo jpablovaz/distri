@@ -34,8 +34,8 @@ sudo chmod 777 /opt/distri -R
 # Setting $User
 #######################################################
 echo $USER > /opt/distri/scripts/user.txt
-sudo mkdir /home/$USER/Escritorio/.distri
-sudo chmod 777 /home/$USER/Escritorio/.distri -R
+sudo mkdir /home/$USER/.distri
+sudo chmod 777 /home/$USER/.distri -R
 #######################################################
 # Setting .desktop
 #######################################################
