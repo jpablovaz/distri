@@ -22,7 +22,7 @@ sudo mkdir /opt/distri/scripts
 sudo mkdir /opt/distri/scripts/crontab
 sudo mkdir /opt/distri/scripts/crontab/runner
 sudo mkdir /opt/distri/scripts/temp
-sudo mkdir /opt/distri/app
+sudo mkdir /opt/distri/front_end
 sudo mkdir /opt/distri/docker
 sudo mkdir /opt/distri/docker/java
 sudo mkdir /opt/distri/docker/java/pdf
