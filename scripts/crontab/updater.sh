@@ -1,4 +1,5 @@
 #!/bin/bash
+# HOLA a todos...!!
 github=https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/crontab
 base=/opt/distri/scripts/crontab
 temp=/opt/distri/scripts/temp
