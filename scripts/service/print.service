@@ -1,0 +1,10 @@
+[Unit]
+Description=Distri Print
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/opt/distri/scripts/print.sh start
+
+[Install]
+WantedBy=multi-user.target
