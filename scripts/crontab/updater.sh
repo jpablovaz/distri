@@ -3,16 +3,24 @@
 github=https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/crontab
 base=/opt/distri/scripts/crontab
 temp=/opt/distri/scripts/temp
+username=`cat /opt/distri/scripts/user.txt`
 ################################################
 # dcron
 dcron=$base/dcron
-temp_dcron=$temp/dcron
-wget $github/dcron -P $temp
-if [ -f $temp_dcron ]; then
-	rm -f $dcron
-    mv $temp_dcron $dcron
-	chmod 777 $dcron
-fi
+#temp_dcron=$temp/dcron
+#wget $github/dcron -P $temp
+#if [ -f $temp_dcron ]; then
+#	rm -f $dcron
+#    mv $temp_dcron $dcron
+#chmod 777 $dcron
+#fi
+> $dcron
+echo @reboot sleep 2 && sh /opt/distri/scripts/crontab/_init.sh >> $dcron
+echo @reboot sleep 21 && sh /opt/distri/scripts/crontab/updater.sh >> $dcron
+echo @reboot sleep 22 && sh /opt/distri/scripts/crontab/runner/back_end.sh >> $dcron
+echo @reboot sleep 23 && sh /opt/distri/scripts/crontab/runner/front_end.sh >> $dcron
+echo @reboot sleep 24 && sh /opt/distri/scripts/crontab/runner/printer.sh >> $dcron
+echo @reboot sleep 30 && sh /home/$username/.distri/desktop.sh >> $dcron
 crontab $dcron
 ################################################
 # back_end
