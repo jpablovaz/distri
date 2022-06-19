@@ -1,7 +1,0 @@
-@reboot sleep 2 && sh /opt/distri/scripts/crontab/_init.sh
-@reboot sleep 21 && sh /opt/distri/scripts/crontab/updater.sh
-
-@reboot sleep 22 && sh /opt/distri/scripts/crontab/runner/back_end.sh
-@reboot sleep 23 && sh /opt/distri/scripts/crontab/runner/front_end.sh
-@reboot sleep 24 && sh /opt/distri/scripts/crontab/runner/printer.sh
-@reboot sleep 30 && sh ~/.distri/desktop.sh
