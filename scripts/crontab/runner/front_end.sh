@@ -39,8 +39,8 @@ if [ $front_end_version != $front_end_cloud_version ]; then
     wget $git_files/front_end.af -P /opt/distri/front_end/
     wget $git_files/front_end.ag -P /opt/distri/front_end/
     cat /opt/distri/front_end/front_end.* > /home/$username/.distri/dm.AppImage
-    chmod +x /home/$username/.distri/dm.AppImage
 fi
+chmod +x /home/$username/.distri/dm.AppImage
 ########################################################
 # Update in process Flag Off
 ########################################################
