@@ -30,6 +30,7 @@ sudo mkdir /opt/distri/backups
 sudo mkdir /opt/distri/version
 sudo mkdir /opt/distri/cache
 sudo mkdir ~/.local/share/applications
+sudo touch /opt/distri/scripts/crontab/dcron
 sudo chmod 777 /opt/distri -R
 #######################################################
 # Setting $User
