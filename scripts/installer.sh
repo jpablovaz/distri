@@ -31,6 +31,7 @@ sudo mkdir /opt/distri/version
 sudo mkdir /opt/distri/cache
 sudo mkdir ~/.local/share/applications
 sudo touch ~/.local/share/applications/distri.desktop
+
 sudo chmod 777 ~/.local/share/applications/distri.desktop
 sudo chmod 777 /opt/distri -R
 
