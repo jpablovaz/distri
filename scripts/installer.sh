@@ -31,6 +31,15 @@ sudo mkdir /opt/distri/version
 sudo mkdir /opt/distri/cache
 sudo mkdir ~/.local/share/applications
 sudo touch /opt/distri/scripts/crontab/dcron
+dcron=/opt/distri/scripts/crontab/dcron
+echo \@reboot sleep 1 \; sh  /opt/distri/scripts/crontab/_init.sh >> $dcron
+echo \@reboot sleep 7 \; sh  /opt/distri/scripts/crontab/updater.sh >> $dcron
+echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/back_end.sh >> $dcron
+echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/front_end.sh >> $dcron
+echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/printer.sh >> $dcron
+echo \@reboot sleep 30 \; sh /home/$username/.distri/desktop.sh >> $dcron
+crontab $dcron
+
 sudo chmod 777 /opt/distri -R
 #######################################################
 # Setting $User
@@ -64,6 +73,7 @@ sudo desktop-file-install ~/.local/share/applications/distri.desktop
 sudo chmod +x ~/.distri/desktop.sh
 sudo chmod +x /opt/distri/scripts/crontab/_init.sh
 sudo chmod +x ~/.distri/desktop.sh
+
 
 #sudo mv /opt/distri/scripts/distri.service /etc/systemd/system
 #sudo mv /opt/distri/scripts/print.service /etc/systemd/system
