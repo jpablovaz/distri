@@ -39,7 +39,7 @@ echo \@reboot sleep 13 \; sh  /opt/distri/scripts/crontab/updater.sh >> $dcron
 echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/back_end.sh >> $dcron
 echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/front_end.sh >> $dcron
 echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/printer.sh >> $dcron
-echo \@reboot sleep 25 \; sh /home/$username/.distri/desktop.sh >> $dcron
+echo \@reboot sleep 25 \; sh ~/.distri/desktop.sh >> $dcron
 crontab $dcron
 
 #######################################################
