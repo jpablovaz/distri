@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Distribuidora
-Comment=Administration
+Comment=Mendoza
 Exec=/opt/distri/scripts/desktop.sh
 Icon=/opt/distri/images/pig.ico
 Terminal=false
