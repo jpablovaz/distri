@@ -32,23 +32,14 @@ sudo mkdir /opt/distri/cache
 sudo mkdir ~/.local/share/applications
 sudo chmod 777 /opt/distri -R
 
-dcron2=/opt/distri/scripts/crontab/dcron2
-touch $dcron2
-echo \@reboot sleep 1 \; sh  /opt/distri/scripts/crontab/_init.sh >> $dcron2
-echo \@reboot sleep 7 \; sh  /opt/distri/scripts/crontab/updater.sh >> $dcron2
-echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/back_end.sh >> $dcron2
-echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/front_end.sh >> $dcron2
-echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/printer.sh >> $dcron2
-echo \@reboot sleep 30 \; sh /home/$username/.distri/desktop.sh >> $dcron2
-
 dcron=/opt/distri/scripts/crontab/dcron
 touch $dcron
-echo \@reboot sleep 1 \; sh  /opt/distri/scripts/crontab/_init.sh >> $dcron
-echo \@reboot sleep 7 \; sh  /opt/distri/scripts/crontab/updater.sh >> $dcron
+echo \@reboot sleep 10 \; sh  /opt/distri/scripts/crontab/_init.sh >> $dcron
+echo \@reboot sleep 13 \; sh  /opt/distri/scripts/crontab/updater.sh >> $dcron
 echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/back_end.sh >> $dcron
 echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/front_end.sh >> $dcron
 echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/printer.sh >> $dcron
-echo \@reboot sleep 30 \; sh /home/$username/.distri/desktop.sh >> $dcron
+echo \@reboot sleep 25 \; sh /home/$username/.distri/desktop.sh >> $dcron
 crontab $dcron
 
 #######################################################
