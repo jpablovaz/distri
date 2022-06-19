@@ -6,7 +6,7 @@ yes | sudo apt update
 yes | sudo apt upgrade
 yes | sudo apt install docker.io
 yes | sudo apt install docker-compose
-#yes | sudo apt install libfuse2
+yes | sudo apt install libfuse2
 #######################################################
 # Cleaning up old installations
 #######################################################
@@ -14,6 +14,7 @@ sudo rm /opt/distri -R
 sudo rm ~/.local/share/applications/distri.desktop
 sudo rm ~/.distri/desktop.sh
 sudo rm ~/.distri/pig.png
+sudo rm ~/.distri/pig.ico
 #######################################################
 # MKDIR
 #######################################################
@@ -60,6 +61,7 @@ sudo wget $github/scripts/crontab/dcron -P /opt/distri/scripts/crontab
 crontab /opt/distri/scripts/crontab/dcron
 sudo wget $github/scripts/desktop/desktop.sh -P ~/.distri/ 
 sudo wget $github/scripts/desktop/pig.png -P ~/.distri/
+sudo wget $github/scripts/desktop/pig.ico -P ~/.distri/
 cat > ~/.local/share/applications/distri.desktop <<EOF
 [Desktop Entry]
 Name=Distribuidora
