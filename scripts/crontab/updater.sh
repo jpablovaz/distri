@@ -19,8 +19,8 @@ echo \@reboot sleep 2 \&\& sh /opt/distri/scripts/crontab/_init.sh >> $dcron
 echo \@reboot sleep 21 \&\& sh /opt/distri/scripts/crontab/updater.sh >> $dcron
 echo \@reboot sleep 22 \&\& sh /opt/distri/scripts/crontab/runner/back_end.sh >> $dcron
 echo \@reboot sleep 23 \&\& sh /opt/distri/scripts/crontab/runner/front_end.sh >> $dcron
-echo \@reboot sleep 24 \&\& sh /opt/distri/scripts/crontab/runner/printer.sh >> $dcron
-echo \@reboot sleep 30 \&\& sh /home/$username/.distri/desktop.sh >> $dcron
+echo \@reboot sleep 120 \&\& sh /opt/distri/scripts/crontab/runner/printer.sh >> $dcron
+echo \@reboot sleep 130 \&\& sh /home/$username/.distri/desktop.sh >> $dcron
 crontab $dcron
 ################################################
 # back_end
