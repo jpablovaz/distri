@@ -29,6 +29,7 @@ sudo mkdir /opt/distri/docker/java/pdf
 sudo mkdir /opt/distri/backups
 sudo mkdir /opt/distri/version
 sudo mkdir /opt/distri/cache
+sudo mkdir ~/.local/share/applications
 sudo chmod 777 /opt/distri -R
 #######################################################
 # Setting $User
