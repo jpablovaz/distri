@@ -2,7 +2,7 @@
 Name=Distribuidora
 Comment=Administration
 Exec=/opt/distri/scripts/desktop.sh
-Icon=/opt/distri/images/pig.png
+Icon=/opt/distri/images/pig.ico
 Terminal=false
 Type=Application
 Categories=Utility
