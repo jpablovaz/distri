@@ -51,7 +51,7 @@ cat > ~/.local/share/applications/distri.desktop <<EOF
 Name=Distribuidora
 Comment=Administration
 Exec=/home/$USER/.distri/desktop.sh
-Icon=/home/$USER/.distri/pig.png
+Icon=/home/$USER/.distri/pig.ico
 Terminal=false
 Type=Application
 Categories=Utility
