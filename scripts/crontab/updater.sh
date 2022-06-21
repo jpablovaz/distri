@@ -21,6 +21,7 @@ echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/back_end.sh >> $
 echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/front_end.sh >> $dcron
 echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/printer.sh >> $dcron
 echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/once.sh >> $dcron
+echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/backup.sh >> $dcron
 echo \@reboot sleep 25 \; sh /home/$username/.distri/desktop.sh >> $dcron
 crontab $dcron
 ################################################
@@ -58,4 +59,13 @@ wget $github/runner/once.sh -P $temp
 if [ -f $temp_once ]; then
     mv $temp_once $once
 	chmod +x $once
+fi
+################################################
+# backup
+backup=$base/runner/backup.sh
+temp_backup=$temp/backup.sh
+wget $github/runner/backup.sh -P $temp
+if [ -f $temp_backup ]; then
+    mv $temp_backup $backup
+	chmod +x $backup
 fi
