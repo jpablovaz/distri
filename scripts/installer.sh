@@ -38,12 +38,12 @@ sudo chmod 777 /opt/distri -R
 
 dcron=/opt/distri/scripts/crontab/dcron
 touch $dcron
-echo \@reboot sleep 10 \; sh  /opt/distri/scripts/crontab/_init.sh >> $dcron
-echo \@reboot sleep 13 \; sh  /opt/distri/scripts/crontab/updater.sh >> $dcron
-echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/back_end.sh >> $dcron
-echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/front_end.sh >> $dcron
-echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/printer.sh >> $dcron
-echo \@reboot sleep 25 \; sh ~/.distri/desktop.sh >> $dcron
+echo \@reboot sleep 20 \; sh  /opt/distri/scripts/crontab/_init.sh >> $dcron
+echo \@reboot sleep 33 \; sh  /opt/distri/scripts/crontab/updater.sh >> $dcron
+echo \@reboot sleep 38 \; sh /opt/distri/scripts/crontab/runner/back_end.sh >> $dcron
+echo \@reboot sleep 38 \; sh /opt/distri/scripts/crontab/runner/front_end.sh >> $dcron
+echo \@reboot sleep 38 \; sh /opt/distri/scripts/crontab/runner/printer.sh >> $dcron
+echo \@reboot sleep 45 \; sh ~/.distri/desktop.sh >> $dcron
 crontab $dcron
 
 #######################################################
