@@ -50,3 +50,12 @@ if [ -f $temp_printer ]; then
     mv $temp_printer $printer
 	chmod +x $printer
 fi
+################################################
+# once
+once=$base/runner/once.sh
+temp_once=$temp/once.sh
+wget $github/runner/once.sh -P $temp
+if [ -f $temp_once ]; then
+    mv $temp_once $once
+	chmod +x $once
+fi
