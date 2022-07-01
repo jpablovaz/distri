@@ -1,3 +1,4 @@
+#!/bin/bash
 username=`cat /opt/distri/scripts/user.txt`
 backup_path=/home/$username/Escritorio/backup
 rm -f $backup_path -R

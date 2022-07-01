@@ -13,18 +13,23 @@ do
 	sleep 5
 	for f in $(find $java_path -type f -name \*) ; do
 		f="$(basename -- $f)"
-		c1=`echo $f | cut -b 1-1`
-		c2=`echo $f | cut -b 2-2`
-		c3=`echo $f | cut -b 3-100`
-		if [ $c1 = '@' ]; then
-			if [ $c2 = 'C' ] || [ $c2 = 'B' ]; then
-				cp $java_path$f $desktop_path$c3
+		at=`echo $f | cut -b 1-1`
+		pdf=`echo $f | cut -b 2-2`
+		p1=`echo $f | cut -b 3-3`
+		p2=`echo $f | cut -b 4-4`
+		name=`echo $f | cut -b 5-100`
+		if [ $at = '@' ]; then
+			if [ $pdf = '1' ]; then
+				cp $java_path$f $desktop_path$name
 			fi
-			if [ $c2 = 'P' ] || [ $c2 = 'B' ]; then
+			if [ $p1 = '1' ]; then
+				lp $java_path$f
+			fi
+			if [ $p2 = '1' ]; then
 				lp $java_path$f
 			fi
 			rm -f $java_path$f
-			chmod 777 $desktop_path$c3
+			chmod 777 $desktop_path$name
 		fi
 	done
 done

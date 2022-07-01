@@ -1,3 +1,4 @@
+#!/bin/bash
 username=`cat /opt/distri/scripts/user.txt`
 desktop_path=/home/$username/Escritorio/once
 rm -f $desktop_path -R

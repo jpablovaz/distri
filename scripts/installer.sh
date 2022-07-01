@@ -7,6 +7,7 @@ yes | sudo apt upgrade
 yes | sudo apt install docker.io
 yes | sudo apt install docker-compose
 yes | sudo apt install libfuse2
+yes | sudo apt install net-tools
 #######################################################
 # Cleaning up old installations
 #######################################################
