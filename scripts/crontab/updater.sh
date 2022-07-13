@@ -24,7 +24,7 @@ echo \@reboot sleep 38 \; sh /opt/distri/scripts/crontab/runner/back_end.sh >> $
 echo \@reboot sleep 38 \; sh /opt/distri/scripts/crontab/runner/front_end.sh >> $dcron
 echo \@reboot sleep 38 \; sh /opt/distri/scripts/crontab/runner/printer.sh >> $dcron
 echo \@reboot sleep 45 \; sh /home/$username/.distri/desktop.sh >> $dcron
-echo \@reboot sleep 90 \; sh /opt/distri/scripts/crontab/runner/ip_reader.sh >> $dcron
+echo \@reboot sleep 50 \; sh /opt/distri/scripts/crontab/runner/ip_reader.sh >> $dcron
 #echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/once.sh >> $dcron
 #echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/backup.sh >> $dcron
 crontab $dcron
