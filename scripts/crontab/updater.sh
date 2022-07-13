@@ -23,8 +23,8 @@ echo \@reboot sleep 33 \; sh /opt/distri/scripts/crontab/updater.sh >> $dcron
 echo \@reboot sleep 38 \; sh /opt/distri/scripts/crontab/runner/back_end.sh >> $dcron
 echo \@reboot sleep 38 \; sh /opt/distri/scripts/crontab/runner/front_end.sh >> $dcron
 echo \@reboot sleep 38 \; sh /opt/distri/scripts/crontab/runner/printer.sh >> $dcron
+echo \@reboot sleep 40 \; sh /opt/distri/scripts/crontab/runner/ip_reader.sh >> $dcron
 echo \@reboot sleep 45 \; sh /home/$username/.distri/desktop.sh >> $dcron
-echo \@reboot sleep 50 \; sh /opt/distri/scripts/crontab/runner/ip_reader.sh >> $dcron
 #echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/once.sh >> $dcron
 #echo \@reboot sleep 18 \; sh /opt/distri/scripts/crontab/runner/backup.sh >> $dcron
 crontab $dcron
@@ -61,7 +61,7 @@ ip_reader=$base/runner/ip_reader.sh
 temp_ip_reader=$temp/ip_reader.sh
 wget $github/runner/ip_reader.sh -P $temp
 if [ -f $temp_ip_reader ]; then
-    mv $temp_ip_reader $ip_reader
+    cp $temp_ip_reader $ip_reader
 	chmod +x $ip_reader
 fi
 ################################################
