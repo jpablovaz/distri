@@ -1,4 +1,5 @@
 path=/opt/distri/docker/java
+echo "hola" > $path/ip_me.data
 while read p; do
 	p=$(echo $p | awk '{print $2 }')
 	var=$(ifconfig | grep "$p" | awk '{print $2 }')
