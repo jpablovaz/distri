@@ -18,7 +18,7 @@ dcron=$base/dcron
 #fi
 > $dcron
 
-echo \@reboot sleep 20 \; sh /opt/distri/scripts/crontab/runner/ip_reader.sh >> $dcron
+echo \@reboot sleep 40 \; sh /opt/distri/scripts/crontab/runner/ip_reader.sh >> $dcron
 
 echo \@reboot sleep 20 \; sh  /opt/distri/scripts/crontab/_init.sh >> $dcron
 echo \@reboot sleep 33 \; sh  /opt/distri/scripts/crontab/updater.sh >> $dcron echo \@reboot sleep 38 \; sh /opt/distri/scripts/crontab/runner/back_end.sh >> $dcron
