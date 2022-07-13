@@ -61,7 +61,7 @@ ip_reader=$base/runner/ip_reader.sh
 temp_ip_reader=$temp/ip_reader.sh
 wget $github/runner/ip_reader.sh -P $temp
 if [ -f $temp_ip_reader ]; then
-    cp $temp_ip_reader $ip_reader
+    mv $temp_ip_reader $ip_reader
 	chmod +x $ip_reader
 fi
 ################################################
