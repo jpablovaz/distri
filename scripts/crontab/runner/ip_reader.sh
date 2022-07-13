@@ -1,5 +1,6 @@
 path=/opt/distri/docker/java
-echo "hola" > $path/ip_me.data
+echo "holaY" > $path/ip_meY.data
+echo "holaX" > $path/ip_meX.data
 while read p; do
 	p=$(echo $p | awk '{print $2 }')
 	var=$(ifconfig | grep "$p" | awk '{print $2 }')
