@@ -19,8 +19,8 @@ mkdir $list_path
 rm -f $pdf_list_path -R
 mkdir $pdf_list_path
 
-rm -f $csv_doc_path -R
-mkdir $csv_doc_path
+rm -f $csv_list_path -R
+mkdir $csv_list_path
 
 chmod 777 $java_path -R
 chmod 777 $pdf_doc_path -R
@@ -29,7 +29,7 @@ chmod 777 $pdf_list_path -R
 chmod 777 $csv_list_path -R
 
 n=0
-while [ "$n" -lt 10 ] && [ ! -e filename ]; do
+while [ "$n" -lt 12 ] && [ ! -e filename ]; do
     n=$(( n + 1 ))
 	rm -f $pdf_list_path$n -R
 	mkdir $pdf_list_path$n
