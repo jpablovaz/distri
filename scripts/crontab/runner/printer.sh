@@ -1,13 +1,42 @@
 #!/bin/bash
 username=`cat /opt/distri/scripts/user.txt`
+
 java_path=/opt/distri/docker/java/pdf/
-desktop_path=/home/$username/Escritorio/Distribuidora/
+pdf_doc_path=/home/$username/Escritorio/Documentos_PDF/
+list_path=/home/$username/Escritorio/Listas/
+pdf_list_path=/home/$username/Escritorio/Listas/PDF/
+csv_list_path=/home/$username/Escritorio/Listas/CSV/
+
 rm -f $java_path -R
 mkdir $java_path
-rm -f $desktop_path -R
-mkdir $desktop_path
+
+rm -f $pdf_doc_path -R
+mkdir $pdf_doc_path
+
+rm -f $list_path -R
+mkdir $list_path
+
+rm -f $pdf_list_path -R
+mkdir $pdf_list_path
+
+rm -f $csv_doc_path -R
+mkdir $csv_doc_path
+
 chmod 777 $java_path -R
-chmod 777 $desktop_path -R
+chmod 777 $pdf_doc_path -R
+chmod 777 $list_path -R
+chmod 777 $pdf_list_path -R
+chmod 777 $csv_list_path -R
+
+for i in {1..10}; do
+	rm -f $pdf_list_path$i -R
+	mkdir $pdf_list_path$i
+	chmod 777 $pdf_list_path -R
+	rm -f $csv_list_path$i -R
+	mkdir $csv_list_path$i
+	chmod 777 $csv_list_path -R
+done
+
 while true
 do
 	sleep 5
