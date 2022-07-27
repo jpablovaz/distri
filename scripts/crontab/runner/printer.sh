@@ -28,14 +28,17 @@ chmod 777 $list_path -R
 chmod 777 $pdf_list_path -R
 chmod 777 $csv_list_path -R
 
-for i in {1..10}; do
-	rm -f $pdf_list_path$i -R
-	mkdir $pdf_list_path$i
-	chmod 777 $pdf_list_path -R
-	rm -f $csv_list_path$i -R
-	mkdir $csv_list_path$i
-	chmod 777 $csv_list_path -R
+n=0
+while [ "$n" -lt 10 ] && [ ! -e filename ]; do
+    n=$(( n + 1 ))
+	rm -f $pdf_list_path$n -R
+	mkdir $pdf_list_path$n
+	chmod 777 $pdf_list_path$n -R
+	rm -f $csv_list_path$n -R
+	mkdir $csv_list_path$n
+	chmod 777 $csv_list_path$n -R
 done
+
 
 while true
 do
