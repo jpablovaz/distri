@@ -31,14 +31,14 @@ chmod 777 $csv_list_path -R
 n=0
 while [ "$n" -lt 12 ] && [ ! -e filename ]; do
     n=$(( n + 1 ))
-	rm -f $pdf_list_path$n -R
-	mkdir $pdf_list_path$n
-	chmod 777 $pdf_list_path$n -R
-	rm -f $csv_list_path$n -R
-	mkdir $csv_list_path$n
-	chmod 777 $csv_list_path$n -R
+	[[ $n < 10 ]] && pre="0" || pre=""
+	rm -f $pdf_list_path$pre$n -R
+	mkdir $pdf_list_path$pre$n
+	chmod 777 $pdf_list_path$pre$n -R
+	rm -f $csv_list_path$pre$n -R
+	mkdir $csv_list_path$pre$n
+	chmod 777 $csv_list_path$pre$n -R
 done
-
 
 while true
 do
@@ -52,7 +52,7 @@ do
 		name=`echo $f | cut -b 5-100`
 		if [ $at = '@' ]; then
 			if [ $pdf = '1' ]; then
-				cp $java_path$f $desktop_path$name
+				cp $java_path$f $pdf_doc_path$name
 			fi
 			if [ $p1 = '1' ]; then
 				lp $java_path$f
@@ -61,7 +61,24 @@ do
 				lp $java_path$f
 			fi
 			rm -f $java_path$f
-			chmod 777 $desktop_path$name
+			chmod 777 $pdf_doc_path$name
 		fi
+
+		if [ $at = 'p' ]; then
+			if [ $p1 = '0' ] && [ $p2 = '1' ]; then
+				cp $java_path$f $pdf_list_path$p2/$name
+			elif [ $p1 = '0' ] && [ $p2 = '2' ]; then
+				cp $java_path$f $pdf_list_path$p2/$name
+			fi
+			if [ $p1 = '1' ]; then
+				lp $java_path$f
+			fi
+			if [ $p2 = '1' ]; then
+				lp $java_path$f
+			fi
+			rm -f $java_path$f
+			chmod 777 $pdf_doc_path$name
+		fi
+
 	done
 done
