@@ -31,8 +31,8 @@ chmod 777 $csv_list_path -R
 n=0
 while [ "$n" -lt 12 ] && [ ! -e filename ]; do
     n=$(( n + 1 ))
-	pre='0'
-	[[ $n -lt 10 ]] && pre=''
+	pre='a'
+	[[ $n -lt 10 ]] && pre='b'
 	rm -f $pdf_list_path$pre$n -R
 	mkdir $pdf_list_path$pre$n
 	chmod 777 $pdf_list_path$pre$n -R
