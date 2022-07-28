@@ -31,16 +31,16 @@ chmod 777 $csv_list_path -R
 n=0
 while [ "$n" -lt 12 ] && [ ! -e filename ]; do
     n=$(( n + 1 ))
-	pre=a
-	[[ $n -lt 10 ]] && pre=b
+	pre=a$n
+	[[ $n -lt 10 ]] && pre=b$n
 
-	rm -f $pdf_list_path$pre$n -R
-	mkdir $pdf_list_path$pre$n
-	chmod 777 $pdf_list_path$pre$n -R
+	rm -f $pdf_list_path$pre -R
+	mkdir $pdf_list_path$pre
+	chmod 777 $pdf_list_path$pre -R
 
-	rm -f $csv_list_path$pre$n -R
-	mkdir $csv_list_path$pre$n
-	chmod 777 $csv_list_path$pre$n -R
+	rm -f $csv_list_path$pre -R
+	mkdir $csv_list_path$pre
+	chmod 777 $csv_list_path$pre -R
 
 done
 
