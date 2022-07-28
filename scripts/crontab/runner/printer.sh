@@ -32,7 +32,7 @@ n=0
 while [ "$n" -lt 12 ] && [ ! -e filename ]; do
     n=$(( n + 1 ))
 	pre=a$n
-	if [ $n -lt 10 ]; then  pre=b$n fi
+	if [ $n -lt 10 ]; then  pre=b$n; fi
 
 	rm -f $pdf_list_path$pre -R
 	mkdir $pdf_list_path$pre
