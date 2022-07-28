@@ -65,12 +65,12 @@ do
 				#cp $java_path$f $pdf_doc_path$name
 				cp $java_path$f $distri_path$name
 			fi
-			#if [ $p1 = '1' ]; then
-			#	lp $java_path$f
-			#fi
-			#if [ $p2 = '1' ]; then
-			#	lp $java_path$f
-			#fi
+			if [ $p1 = '1' ]; then
+				lp $java_path$f
+			fi
+			if [ $p2 = '1' ]; then
+				lp $java_path$f
+			fi
 			#rm -f $java_path$f
 			#chmod 777 $pdf_doc_path$name
 			chmod 777 $distri_path$name
