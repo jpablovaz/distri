@@ -51,7 +51,7 @@ n=0
 
 while true
 do
-	sleep 5
+	sleep 10
 	for f in $(find $java_path -type f -name \*) ; do
 		f="$(basename -- $f)"
 		at=`echo $f | cut -b 1-1`
@@ -71,7 +71,7 @@ do
 			if [ $p2 = '1' ]; then
 				lp $java_path$f
 			fi
-			#rm -f $java_path$f
+			rm -f $java_path$f
 			#chmod 777 $pdf_doc_path$name
 			chmod 777 $distri_path$name
 		#elif [ $at = 'p' ]; then
