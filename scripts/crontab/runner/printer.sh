@@ -36,15 +36,12 @@ do
 	for f in $(find $java_path -type f -name \*) ; do
 		f="$(basename -- $f)"
 		at=`echo $f | cut -b 1-1`
-		pdf=`echo $f | cut -b 2-2`
-		p1=`echo $f | cut -b 3-3`
-		p2=`echo $f | cut -b 4-4`
-		num=`echo $f | cut -b 3-4`
-		name=`echo $f | cut -b 5-100`
+		p1=`echo $f | cut -b 2-2`
+		p2=`echo $f | cut -b 3-3`
+		num=`echo $f | cut -b 2-3`
+		name=`echo $f | cut -b 4-100`
 		if [ $at = '@' ]; then
-			if [ $pdf = '1' ]; then
-				cp $java_path$f $pdf_doc_path$name
-			fi
+			cp $java_path$f $pdf_doc_path$name
 			if [ $p1 = '1' ]; then
 				lp $java_path$f
 			fi
