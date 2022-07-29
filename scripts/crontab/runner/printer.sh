@@ -71,13 +71,13 @@ do
 			rm -f $java_path$f
 			chmod 777 $pdf_doc_path$name
 		elif [ $at = '&' ]; then
-			cp $java_path$f $pdf_list_path$nu/$name
+			cp $java_path$f $pdf_list_path$num/$name
 			rm -f $java_path$f
-			chmod 777 $pdf_list_path$nu/$name
+			chmod 777 $pdf_list_path$num/$name
 		elif [ $at = '#' ]; then
-			cp $java_path$f $csv_list_path$nu/$name
+			cp $java_path$f $csv_list_path$num/$name
 			rm -f $java_path$f
-			chmod 777 $csv_list_path$nu/$name
+			chmod 777 $csv_list_path$num/$name
 		fi
 	done
 done
