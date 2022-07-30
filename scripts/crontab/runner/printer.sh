@@ -2,7 +2,7 @@
 username=`cat /opt/distri/scripts/user.txt`
 
 java_path=/opt/distri/docker/java/pdf/
-pdf_doc_path=/home/$username/Escritorio/Documentos_PDF/
+pdf_doc_path=/home/$username/Escritorio/Comprobantes/
 list_path=/home/$username/Escritorio/Listas/
 
 # JAVA
