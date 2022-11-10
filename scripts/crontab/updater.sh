@@ -1,5 +1,4 @@
 #!/bin/bash
-# HOLA a todos...!!
 github=https://raw.githubusercontent.com/jpablovaz/distri/main/scripts/crontab
 github_java=https://raw.githubusercontent.com/jpablovaz/distri/main/docker/java
 base=/opt/distri/scripts/crontab
