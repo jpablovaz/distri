@@ -28,6 +28,8 @@ sudo mkdir /opt/distri/front_end
 sudo mkdir /opt/distri/docker
 sudo mkdir /opt/distri/docker/java
 sudo mkdir /opt/distri/docker/java/pdf
+sudo mkdir /opt/distri/docker/java/backup
+sudo mkdir /opt/distri/docker/java/restore
 sudo mkdir /opt/distri/backups
 sudo mkdir /opt/distri/version
 sudo mkdir /opt/distri/cache
