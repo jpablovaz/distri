@@ -26,6 +26,7 @@ sudo mkdir /opt/distri/scripts/crontab/runner
 sudo mkdir /opt/distri/scripts/temp
 sudo mkdir /opt/distri/front_end
 sudo mkdir /opt/distri/docker
+sudo mkdir /opt/distri/docker/postgres
 sudo mkdir /opt/distri/docker/java
 sudo mkdir /opt/distri/docker/java/pdf
 sudo mkdir /opt/distri/docker/java/backup

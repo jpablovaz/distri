@@ -21,6 +21,20 @@ fi
 #######################################################
 # Download new Version
 #######################################################
+# PostgresDockerFile
+docker=/opt/distri/docker/postgres/Dockerfile
+temp_docker=$temp/Dockerfile
+wget $github/docker/postgres/Dockerfile -P $temp
+if [ -f $temp_docker ]; then
+    mv -f $temp_docker $docker
+fi
+# PostgresConfig
+postgres=/opt/distri/docker/postgres/pg_hba.conf
+temp_postgres=$temp/pg_hba.conf
+wget $github/docker/postgres/pg_hba.conf -P $temp
+if [ -f $temp_postgres ]; then
+    mv -f $temp_postgres $postgres
+fi
 # DockerCompose
 compose=/opt/distri/docker/docker-compose.yml
 temp_compose=$temp/docker-compose.yml

@@ -2,7 +2,7 @@ version: "3"
 
 services:
   postgres:
-    image: postgres:15.1-alpine
+    build: ./postgres
     environment:
       POSTGRES_USER: distri
       POSTGRES_DB: distri
@@ -10,7 +10,7 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - ./postgres:/var/lib/postgresql/data
+      - ./data:/var/lib/postgresql/data
     restart: unless-stopped
 
   spring-boot:
