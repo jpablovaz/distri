@@ -2,7 +2,7 @@
 username=`cat /opt/distri/scripts/user.txt`
 
 java_path=/opt/distri/docker/java/pdf/
-if [ -f /home/$username/Desktop ]; then
+if [ -e /home/$username/Desktop ]; then
   pdf_doc_path=/home/$username/Desktop/Comprobantes/
   list_path=/home/$username/Desktop/Listas/
 else

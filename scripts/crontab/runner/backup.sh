@@ -1,6 +1,6 @@
 #!/bin/bash
 username=`cat /opt/distri/scripts/user.txt`
-if [ -f /home/$username/Desktop ]; then
+if [ -e /home/$username/Desktop ]; then
   backup_path=/home/$username/Desktop/backup
 else
   backup_path=/home/$username/Escritorio/backup
