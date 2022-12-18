@@ -2,8 +2,13 @@
 username=`cat /opt/distri/scripts/user.txt`
 
 java_path=/opt/distri/docker/java/pdf/
-pdf_doc_path=/home/$username/Escritorio/Comprobantes/
-list_path=/home/$username/Escritorio/Listas/
+if [ -f /home/$username/Desktop ]; then
+  pdf_doc_path=/home/$username/Desktop/Comprobantes/
+  list_path=/home/$username/Desktop/Listas/
+else
+  pdf_doc_path=/home/$username/Escritorio/Comprobantes/
+  list_path=/home/$username/Escritorio/Listas/
+fi
 
 # JAVA
 rm -f $java_path -R
