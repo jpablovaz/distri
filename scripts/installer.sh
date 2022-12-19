@@ -31,7 +31,6 @@ sudo mkdir /opt/distri/docker/java
 sudo mkdir /opt/distri/docker/java/pdf
 sudo mkdir /opt/distri/docker/java/backup
 sudo mkdir /opt/distri/docker/java/restore
-sudo mkdir /opt/distri/backups
 sudo mkdir /opt/distri/version
 sudo mkdir /opt/distri/cache
 sudo mkdir ~/.local/share/applications
