@@ -21,3 +21,4 @@ services:
       - postgres
     volumes:
       - ./java:/home/app
+    restart: unless-stopped
