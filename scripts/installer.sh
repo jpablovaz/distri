@@ -46,6 +46,7 @@ crontab $dcron
 # Setting $User
 #######################################################
 echo $USER > /opt/distri/scripts/user.txt
+echo $USER > /opt/distri/docker/java/user.txt
 sudo mkdir /home/$USER/.distri
 sudo chmod 777 /home/$USER/.distri -R
 #######################################################
