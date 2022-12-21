@@ -17,7 +17,7 @@ dcron=$base/dcron
 #fi
 > $dcron
 
-echo \@reboot sleep 15 \; sh /opt/distri/scripts/crontab/runner/ip_reader.sh >> $dcron
+#echo \@reboot sleep 15 \; sh /opt/distri/scripts/crontab/runner/ip_reader.sh >> $dcron
 echo \@reboot sleep 20 \; sh /opt/distri/scripts/crontab/_init.sh >> $dcron
 echo \@reboot sleep 33 \; sh /opt/distri/scripts/crontab/updater.sh >> $dcron 
 echo \@reboot sleep 38 \; sh /opt/distri/scripts/crontab/runner/back_end.sh >> $dcron
@@ -56,37 +56,37 @@ if [ -f $temp_printer ]; then
 fi
 ################################################
 # ip_reader
-ip_reader=$base/runner/ip_reader.sh
-temp_ip_reader=$temp/ip_reader.sh
-wget $github/runner/ip_reader.sh -P $temp
-if [ -f $temp_ip_reader ]; then
-    mv $temp_ip_reader $ip_reader
-	chmod +x $ip_reader
-fi
+#ip_reader=$base/runner/ip_reader.sh
+#temp_ip_reader=$temp/ip_reader.sh
+#wget $github/runner/ip_reader.sh -P $temp
+#if [ -f $temp_ip_reader ]; then
+#    mv $temp_ip_reader $ip_reader
+#	chmod +x $ip_reader
+#fi
 ################################################
 # ip_network
-ip_network=$base_java/ip_network.data
-temp_ip_network=$temp/ip_network.data
-wget $github_java/ip_network.data -P $temp
-if [ -f $temp_ip_network ]; then
-    mv $temp_ip_network $ip_network
-	chmod +x $ip_network
-fi
+#ip_network=$base_java/ip_network.data
+#temp_ip_network=$temp/ip_network.data
+#wget $github_java/ip_network.data -P $temp
+#if [ -f $temp_ip_network ]; then
+#    mv $temp_ip_network $ip_network
+#	chmod +x $ip_network
+#fi
 ################################################
 # once
-once=$base/runner/once.sh
-temp_once=$temp/once.sh
-wget $github/runner/once.sh -P $temp
-if [ -f $temp_once ]; then
-    mv $temp_once $once
-	chmod +x $once
-fi
+#once=$base/runner/once.sh
+#temp_once=$temp/once.sh
+#wget $github/runner/once.sh -P $temp
+#if [ -f $temp_once ]; then
+#    mv $temp_once $once
+#	chmod +x $once
+#fi
 ################################################
 # backup
-backup=$base/runner/backup.sh
-temp_backup=$temp/backup.sh
-wget $github/runner/backup.sh -P $temp
-if [ -f $temp_backup ]; then
-    mv $temp_backup $backup
-	chmod +x $backup
-fi
+#backup=$base/runner/backup.sh
+#temp_backup=$temp/backup.sh
+#wget $github/runner/backup.sh -P $temp
+#if [ -f $temp_backup ]; then
+#    mv $temp_backup $backup
+#	chmod +x $backup
+#fi

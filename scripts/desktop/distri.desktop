@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Distribuidora
-Comment=Mendoza
-Exec=/opt/distri/scripts/desktop.sh
-Icon=/opt/distri/scripts/desktop/pig.png
-Terminal=false
-Type=Application
-Categories=Utility
