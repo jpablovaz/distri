@@ -1,11 +1,10 @@
 #!/bin/bash
 username=`cat /opt/distri/scripts/user.txt`
-if [ -e /home/$username/Desktop ]; then
-  backup_path=/home/$username/Desktop/backup
-else
-  backup_path=/home/$username/Escritorio/backup
-fi
-rm -f $backup_path -R
-mkdir $backup_path
-chmod 777 $backup_path -R
-echo "backup" >> $backup_path/hola.txt
+backup_java_path=/opt/distri/docker/java/backup/
+backup_dropbox_path=/home/$username/Dropbox/Backups/
+
+while true
+do
+	sleep 180
+  cp $backup_java_path/* $backup_dropbox_path
+done
