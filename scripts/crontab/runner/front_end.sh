@@ -49,4 +49,4 @@ rm $running
 # Run the App
 ########################################################
 #/home/$username/.distri/dm.AppImage
-sh /home/$username/.distri/desktop.sh
+#sh /home/$username/.distri/desktop.sh
