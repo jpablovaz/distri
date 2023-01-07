@@ -1,6 +1,12 @@
 version: "3"
 
 services:
+  apache:
+    image: httpd:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./build:/usr/local/apache2/htdocs
   postgres:
     build: ./postgres
     environment:
