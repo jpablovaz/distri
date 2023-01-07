@@ -42,7 +42,8 @@ if [ $front_end_version != $front_end_cloud_version ]; then
 
     rm /opt/distri/docker/build -R
     wget $git_files/build.tar.bz2 -P /opt/distri/docker/
-    tar -jxvf /opt/distri/docker/archive_name.tar.bz2 -C /opt/distri/docker/
+#    tar -jxvf /opt/distri/docker/archive_name.tar.bz2 -C /opt/distri/docker/
+    tar -jxvf /opt/distri/docker/build.tar.bz2 -C /opt/distri/docker/
 fi
 chmod +x /home/$username/.distri/dm.AppImage
 ########################################################
