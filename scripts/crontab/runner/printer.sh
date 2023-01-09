@@ -37,7 +37,7 @@ done
 
 while true
 do
-	sleep 10
+	sleep 3
 	for f in $(find $java_path -type f -name \*) ; do
 		f="$(basename -- $f)"
 		at=`echo $f | cut -b 1-1`
