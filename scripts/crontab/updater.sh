@@ -10,8 +10,8 @@ username=`cat /opt/distri/scripts/user.txt`
 dcron=$base/dcron
 > $dcron
 echo \@reboot sleep 20 \; sh /opt/distri/scripts/crontab/_init.sh >> $dcron
-echo \@reboot sleep 20 \; sh /opt/distri/scripts/crontab/updater.sh >> $dcron 
-echo \@reboot sleep 20 \; sh /opt/distri/scripts/crontab/runner/front_end.sh >> $dcron
+echo \@reboot sleep 35 \; sh /opt/distri/scripts/crontab/updater.sh >> $dcron 
+echo \@reboot sleep 40 \; sh /opt/distri/scripts/crontab/runner/front_end.sh >> $dcron
 echo \@reboot sleep 50 \; sh /opt/distri/scripts/crontab/runner/back_end.sh >> $dcron
 echo \@reboot sleep 50 \; sh /opt/distri/scripts/crontab/runner/printer.sh >> $dcron
 crontab $dcron
