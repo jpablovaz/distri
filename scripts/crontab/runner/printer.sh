@@ -1,6 +1,5 @@
 #!/bin/bash
 username=`cat /opt/distri/scripts/user.txt`
-
 java_path=/opt/distri/docker/java/pdf/
 if [ -e /home/$username/Desktop ]; then
   pdf_doc_path=/home/$username/Desktop/Comprobantes/
@@ -9,22 +8,18 @@ else
   pdf_doc_path=/home/$username/Escritorio/Comprobantes/
   list_path=/home/$username/Escritorio/Listas/
 fi
-
 # JAVA
 rm -f $java_path -R
 mkdir $java_path
 chmod 777 $java_path -R
-
 # DOCUMENTS
 rm -f $pdf_doc_path -R
 mkdir $pdf_doc_path
 chmod 777 $pdf_doc_path -R
-
 # LIST ROOT
 rm -f $list_path -R
 mkdir $list_path
 chmod 777 $list_path -R
-
 # LIST FOLDER 1..12
 n=0
 while [ $n -lt 12 ]; do
@@ -34,7 +29,6 @@ while [ $n -lt 12 ]; do
 	mkdir $list_path$folder
 	chmod 777 $list_path$folder -R
 done
-
 while true
 do
 	sleep 3

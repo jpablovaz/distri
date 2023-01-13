@@ -10,8 +10,6 @@ yes | sudo apt install docker-compose
 # Cleaning up old installations
 #######################################################
 sudo rm /opt/distri -R
-sudo rm ~/.distri/desktop.sh
-sudo rm ~/.distri/pig.png
 #######################################################
 # MKDIR
 #######################################################
@@ -32,34 +30,31 @@ sudo mkdir /opt/distri/cache
 sudo chmod 777 /opt/distri -R
 dcron=/opt/distri/scripts/crontab/dcron
 touch $dcron
-echo \@reboot sleep 20 \; sh /opt/distri/scripts/crontab/_init.sh >> $dcron
+echo \@reboot sleep 30 \; sh /opt/distri/scripts/crontab/_init.sh >> $dcron
 echo \@reboot sleep 33 \; sh /opt/distri/scripts/crontab/updater.sh >> $dcron
 echo \@reboot sleep 38 \; sh /opt/distri/scripts/crontab/runner/back_end.sh >> $dcron
 echo \@reboot sleep 38 \; sh /opt/distri/scripts/crontab/runner/front_end.sh >> $dcron
 echo \@reboot sleep 38 \; sh /opt/distri/scripts/crontab/runner/printer.sh >> $dcron
+echo \@reboot sleep 38 \; sh /opt/distri/scripts/crontab/runner/backup.sh >> $dcron
 crontab $dcron
 #######################################################
 # Setting $User
 #######################################################
 echo $USER > /opt/distri/scripts/user.txt
 echo $USER > /opt/distri/docker/java/user.txt
-sudo mkdir /home/$USER/.distri
-sudo chmod 777 /home/$USER/.distri -R
+#sudo mkdir /home/$USER/.distri
+#sudo chmod 777 /home/$USER/.distri -R
 #######################################################
-# Setting .desktop
+# Setting
 #######################################################
 github=https://raw.githubusercontent.com/jpablovaz/distri/main
 sudo wget $github/scripts/crontab/_init.sh -P /opt/distri/scripts/crontab
 sudo wget $github/scripts/crontab/dcron -P /opt/distri/scripts/crontab
 crontab /opt/distri/scripts/crontab/dcron
-sudo wget $github/scripts/desktop/desktop.sh -P ~/.distri/ 
-sudo wget $github/scripts/desktop/pig.png -P ~/.distri/
 #######################################################
 # Setting Up Boot Script
 #######################################################
-sudo chmod +x ~/.distri/desktop.sh
 sudo chmod +x /opt/distri/scripts/crontab/_init.sh
-sudo chmod +x ~/.distri/desktop.sh
 #######################################################
 # Initial Versions
 #######################################################
