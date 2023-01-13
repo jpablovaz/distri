@@ -6,8 +6,6 @@ yes | sudo apt update
 yes | sudo apt upgrade
 yes | sudo apt install docker.io
 yes | sudo apt install docker-compose
-#yes | sudo apt install libfuse2
-#yes | sudo apt install net-tools
 #######################################################
 # Cleaning up old installations
 #######################################################
@@ -31,7 +29,6 @@ sudo mkdir /opt/distri/docker/java/backup
 sudo mkdir /opt/distri/docker/java/restore
 sudo mkdir /opt/distri/version
 sudo mkdir /opt/distri/cache
-
 sudo chmod 777 /opt/distri -R
 dcron=/opt/distri/scripts/crontab/dcron
 touch $dcron
@@ -41,7 +38,6 @@ echo \@reboot sleep 38 \; sh /opt/distri/scripts/crontab/runner/back_end.sh >> $
 echo \@reboot sleep 38 \; sh /opt/distri/scripts/crontab/runner/front_end.sh >> $dcron
 echo \@reboot sleep 38 \; sh /opt/distri/scripts/crontab/runner/printer.sh >> $dcron
 crontab $dcron
-
 #######################################################
 # Setting $User
 #######################################################
@@ -64,12 +60,6 @@ sudo wget $github/scripts/desktop/pig.png -P ~/.distri/
 sudo chmod +x ~/.distri/desktop.sh
 sudo chmod +x /opt/distri/scripts/crontab/_init.sh
 sudo chmod +x ~/.distri/desktop.sh
-
-#sudo mv /opt/distri/scripts/distri.service /etc/systemd/system
-#sudo mv /opt/distri/scripts/print.service /etc/systemd/system
-#sudo systemctl daemon-reload
-#sudo systemctl enable distri.service
-#sudo systemctl enable print.service
 #######################################################
 # Initial Versions
 #######################################################

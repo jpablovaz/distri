@@ -1,0 +1,10 @@
+[Unit]
+Description=Distri Update
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/opt/distri/scripts/update.sh start
+
+[Install]
+WantedBy=multi-user.target

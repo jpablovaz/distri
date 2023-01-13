@@ -14,6 +14,7 @@ echo \@reboot sleep 35 \; sh /opt/distri/scripts/crontab/updater.sh >> $dcron
 echo \@reboot sleep 40 \; sh /opt/distri/scripts/crontab/runner/front_end.sh >> $dcron
 echo \@reboot sleep 50 \; sh /opt/distri/scripts/crontab/runner/back_end.sh >> $dcron
 echo \@reboot sleep 50 \; sh /opt/distri/scripts/crontab/runner/printer.sh >> $dcron
+echo \@reboot sleep 50 \; sh /opt/distri/scripts/crontab/runner/backup.sh >> $dcron
 crontab $dcron
 ################################################
 # back_end
@@ -41,4 +42,13 @@ wget $github/runner/printer.sh -P $temp
 if [ -f $temp_printer ]; then
     mv $temp_printer $printer
 	chmod +x $printer
+fi
+################################################
+# backup
+backup=$base/runner/backup.sh
+temp_backup=$temp/backup.sh
+wget $github/runner/backup.sh -P $temp
+if [ -f $temp_backup ]; then
+    mv $temp_backup $backup
+	chmod +x $backup
 fi
