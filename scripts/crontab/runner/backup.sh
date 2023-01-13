@@ -6,5 +6,11 @@ backup_dropbox_path=/home/$username/Dropbox/Backups/
 while true
 do
 	sleep 180
-  cp $backup_java_path/* $backup_dropbox_path
+  if [ -f $backup_java_path/delete.txt ]; then
+    rm $backup_java_path/delete.txt
+    rm $backup_dropbox_path/* -f
+  fi
+
+  cp -R -u -p $backup_java_path $backup_dropbox_path
+
 done
