@@ -4,7 +4,7 @@ backup_java_path=/opt/distri/docker/java/backup/
 backup_dropbox_path=/home/$username/Dropbox/Backups/
 while true
 do
-	sleep 600
+	sleep 100
   if [ -f $backup_java_path/delete.txt ]; then
     rm $backup_java_path/delete.txt
     rm $backup_dropbox_path/* -f
