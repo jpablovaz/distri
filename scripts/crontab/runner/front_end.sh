@@ -24,9 +24,8 @@ fi
 #######################################################
 if [ $front_end_version != $front_end_cloud_version ]; then
 	rm /opt/distri/docker/build -R
-	# wget $git_files/build -P /opt/distri/docker/
-	wget --continue -X media -r $git_files/build -P /opt/distri/docker/
-#    wget $git_files/build.tar.bz2 -P /opt/distri/docker/
-#    tar -jxvf /opt/distri/docker/build.tar.bz2 -C /opt/distri/docker/
-#    rm /opt/distri/docker/build.tar.bz2
+	wget $git_files/build.tar.bz2 -P /opt/distri/docker/
+	tar -jxvf /opt/distri/docker/build.tar.bz2 -C /opt/distri/docker/
+	rm /opt/distri/docker/build.tar.bz2
+	cp /opt/distri/images/* /opt/distri/build/static/media/
 fi
