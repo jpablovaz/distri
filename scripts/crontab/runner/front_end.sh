@@ -27,5 +27,5 @@ if [ $front_end_version != $front_end_cloud_version ]; then
 	wget $git_files/build.tar.bz2 -P /opt/distri/docker/
 	tar -jxvf /opt/distri/docker/build.tar.bz2 -C /opt/distri/docker/
 	rm /opt/distri/docker/build.tar.bz2
-	cp /opt/distri/media /opt/distri/build/static/ -R
+	cp /opt/distri/media /opt/distri/docker/build/static/ -R
 fi
