@@ -6,7 +6,7 @@ DAY_OF_THE_MONTH=$(date +%F)
 username=`cat /opt/distri/scripts/user.txt`
 backup_java_path=/opt/distri/docker/java/backup/
 backup_dropbox_path=/home/$username/Dropbox/Backups/$DAY_OF_THE_WEEK
-backup_desktop_path=/home/$username/Desktop/Backups/up-$DAY_OF_THE_MONTH
+backup_desktop_path=/home/$username/Escritorio/Backups/up-$DAY_OF_THE_MONTH
 #---------------------------------------------------
 while true
 do
