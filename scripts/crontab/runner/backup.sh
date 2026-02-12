@@ -1,7 +1,7 @@
 #!/bin/bash
 #---------------------------------------------------
 DAY_OF_THE_WEEK=$(date +%A)
-DAY_OF_THE_MONTH=$(date +%F)
+DAY_OF_THE_MONTH=$(date +%d)
 #---------------------------------------------------
 username=`cat /opt/distri/scripts/user.txt`
 backup_java_path=/opt/distri/docker/java/backup/
