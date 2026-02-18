@@ -13,13 +13,13 @@ mkdir -p $backup_desktop_path
 #---------------------------------------------------
 while true
 do
-  sleep 100
-  if [ -f $backup_java_path/delete.txt ]; then
-    rm $backup_java_path/delete.txt
-    rm $backup_dropbox_path/* -f
-    rm $backup_desktop_path/* -f
-  fi
-  #cp -R -u -p $backup_java_path/* $backup_dropbox_path
+  sleep 600
+  #if [ -f $backup_java_path/delete.txt ]; then
+  #  rm $backup_java_path/delete.txt
+  rm $backup_dropbox_path/* -f
+  rm $backup_desktop_path/* -f
+  #fi
   cp -R -u $backup_java_path/* $backup_dropbox_path
   cp -R -u $backup_java_path/* $backup_desktop_path
+  sleep 3000
 done
