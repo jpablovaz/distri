@@ -6,7 +6,7 @@ DAY_OF_THE_MONTH=$(date +%d)
 username=`cat /opt/distri/scripts/user.txt`
 backup_java_path=/opt/distri/docker/java/backup/
 backup_dropbox_path=/home/$username/Dropbox/Backups/$DAY_OF_THE_WEEK
-backup_desktop_path=/home/$username/Escritorio/Backups/up-$DAY_OF_THE_MONTH
+backup_desktop_path=/home/$username/Backups/$DAY_OF_THE_MONTH
 mkdir -p $backup_java_path
 mkdir -p $backup_dropbox_path
 mkdir -p $backup_desktop_path
@@ -21,5 +21,5 @@ do
   #fi
   cp -R -u $backup_java_path/* $backup_dropbox_path
   cp -R -u $backup_java_path/* $backup_desktop_path
-  sleep 3000
+  sleep 2000
 done
