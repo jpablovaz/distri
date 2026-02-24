@@ -6,10 +6,10 @@ DAY_OF_THE_MONTH=$(date +%d)
 username=`cat /opt/distri/scripts/user.txt`
 backup_java_path=/opt/distri/docker/java/backup/
 backup_dropbox_path=/home/$username/Dropbox/Backups/$DAY_OF_THE_WEEK
-backup_desktop_path=/home/$username/Backups/$DAY_OF_THE_MONTH
+backup_home_path=/home/$username/Backups/$DAY_OF_THE_MONTH
 mkdir -p $backup_java_path
 mkdir -p $backup_dropbox_path
-mkdir -p $backup_desktop_path
+mkdir -p $backup_home_path
 #---------------------------------------------------
 while true
 do
@@ -17,9 +17,9 @@ do
   #if [ -f $backup_java_path/delete.txt ]; then
   #  rm $backup_java_path/delete.txt
   rm $backup_dropbox_path/* -f
-  rm $backup_desktop_path/* -f
+  rm $backup_home_path/* -f
   #fi
   cp -R -u $backup_java_path/* $backup_dropbox_path
-  cp -R -u $backup_java_path/* $backup_desktop_path
+  cp -R -u $backup_java_path/* $backup_home_path
   sleep 2000
 done

@@ -5,7 +5,7 @@ base=/opt/distri/scripts/crontab
 base_java=/opt/distri/docker/java
 temp=/opt/distri/scripts/temp
 username=`cat /opt/distri/scripts/user.txt`
-################################################
+#-----------------------------------------------
 # dcron
 dcron=$base/dcron
 > $dcron
@@ -16,7 +16,7 @@ echo \@reboot sleep 50 \; sh /opt/distri/scripts/crontab/runner/back_end.sh >> $
 echo \@reboot sleep 50 \; sh /opt/distri/scripts/crontab/runner/printer.sh >> $dcron
 echo \@reboot sleep 50 \; sh /opt/distri/scripts/crontab/runner/backup.sh >> $dcron
 crontab $dcron
-################################################
+#-----------------------------------------------
 # back_end
 back_end=$base/runner/back_end.sh
 temp_back_end=$temp/back_end.sh
@@ -25,7 +25,7 @@ if [ -f $temp_back_end ]; then
     mv $temp_back_end $back_end
 	chmod +x $back_end
 fi
-################################################
+#-----------------------------------------------
 # front_end
 front_end=$base/runner/front_end.sh
 temp_front_end=$temp/front_end.sh
@@ -34,7 +34,7 @@ if [ -f $temp_front_end ]; then
     mv $temp_front_end $front_end
 	chmod +x $front_end
 fi
-################################################
+#-----------------------------------------------
 # printer
 printer=$base/runner/printer.sh
 temp_printer=$temp/printer.sh
@@ -43,7 +43,7 @@ if [ -f $temp_printer ]; then
     mv $temp_printer $printer
 	chmod +x $printer
 fi
-################################################
+#-----------------------------------------------
 # backup
 backup=$base/runner/backup.sh
 temp_backup=$temp/backup.sh

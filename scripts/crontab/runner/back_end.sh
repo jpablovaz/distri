@@ -1,13 +1,13 @@
 #!/bin/bash
-#######################################################
+#------------------------------------------------------
 # Constants
-#######################################################
+#------------------------------------------------------
 github=https://raw.githubusercontent.com/jpablovaz/distri/main
 username=`cat /opt/distri/scripts/user.txt`
 temp=/opt/distri/scripts/temp
-#######################################################
+#------------------------------------------------------
 # Getting Version number
-#######################################################
+#------------------------------------------------------
 back_end_version=`cat /opt/distri/version/back_end_version.txt`
 temp_back_end_version=$temp/back_end_version.txt
 wget $github/version/back_end_version.txt -P $temp
@@ -18,9 +18,9 @@ if [ -f $temp_back_end_version ]; then
 else
     back_end_cloud_version=$back_end_version
 fi
-#######################################################
+#------------------------------------------------------
 # Download new Version
-#######################################################
+#------------------------------------------------------
 # PostgresDockerFile
 docker=/opt/distri/docker/postgres/Dockerfile
 temp_docker=$temp/Dockerfile
@@ -54,8 +54,8 @@ if [ $back_end_version != $back_end_cloud_version ]; then
     rm /opt/distri/docker/java/distri.jar
     wget https://github.com/jpablovaz/distri/raw/main/docker/java/distri.jar -P /opt/distri/docker/java/
 fi
-#######################################################
+#------------------------------------------------------
 # Run DockerCompose
-#######################################################
+#------------------------------------------------------
 cd /opt/distri/docker
 docker-compose up
