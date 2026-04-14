@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  apache:
+    image: httpd:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./build:/usr/local/apache2/htdocs
+  postgres:
+    build: ./postgres
+    environment:
+      POSTGRES_USER: distri
+      POSTGRES_DB: distri
+      POSTGRES_PASSWORD: distri
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    restart: unless-stopped
+  spring-boot:
+    build: ./java
+    ports:
+      - 8090:8090
+    depends_on:
+      - postgres
+    volumes:
+      - ./java:/home/app
+    restart: unless-stopped
